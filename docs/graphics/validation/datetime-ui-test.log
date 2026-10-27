@@ -1,0 +1,15 @@
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 21:12:14 GLES OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1; GPU Mesa Intel(R) Iris(R) Graphics 6100 (BDW GT3); display 2560x1600; HTML 1280x800
+2026/10/27 21:12:14 GPU bridge: all 12 SDK ABI layout checks passed
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+2026/10/27 21:12:14 HTML renderer=gpu accelerated=true
+2026/10/27 21:12:14 Wi-Fi: enabled=true connected=true blocked=false error=""
+2026/10/27 21:12:14 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 21:12:14 Battery: 59% Charging
+2026/10/27 21:12:15 PASS: custom slider drags -> Go (volume/seek=75), play/pause, dropdown selection; no native form controls; fonts=true
+2026/10/27 21:12:15 PASS: battery popover opens, stays within viewport below anchor, closes on Escape and outside click
+2026/10/27 21:12:15 PASS: current-month calendar, centered date modal, keyboard editing, invalid-date rejection, Cancel, backend leap-day validation; system time unchanged by self-test
+2026/10/27 21:12:17 Dashboard state={"duration":0,"playing":false,"mute":false,"tone":false,"record":false,"analyzer":false,"volume":80,"seek":0}
+2026/10/27 21:12:17 GPU commands_drawn=555 command_updates=3 asset_upload_bytes=2161680 draw_submit_ms_per_frame=0.129
+2026/10/27 21:12:17 RESOURCE cpu_one_core_pct=21.09 peak_rss_mib=166.71
+2026/10/27 21:12:17 RESULT seconds=3.010 frames=157 fps=52.17 frames_over_25ms=3 html_render_ms_per_frame=1.272 native_calls=31

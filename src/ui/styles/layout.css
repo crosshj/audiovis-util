@@ -1,0 +1,23 @@
+.statusbar{height:36px;background:linear-gradient(#242930,#20252d);border-bottom:1px solid #343a43;display:flex;justify-content:flex-end;align-items:center;padding:0 18px;gap:24px;font-size:15px;color:var(--text-strong)}
+.statusbar [data-icon]{width:24px;height:24px}
+/* Center the visible Inter numerals against the Wi-Fi glyph, not its font baseline. */
+.statusbar #clock{height:24px;line-height:24px;position:relative;top:2px}
+
+header{position:absolute;left:46px;top:80px;display:flex;align-items:center;gap:26px}
+h1{font:48px InterDisplay,Inter,sans-serif;margin:0;letter-spacing:-1px}
+header p{margin:2px 0 0;font-size:20px;color:var(--text-muted)}
+.brandmark{display:flex;align-items:center;justify-content:space-between;width:66px;height:62px;margin-top:-16px}
+.brandmark i{width:4px;height:13px;background:#ccd0dc;border-radius:3px}
+.brandmark i:nth-child(2),.brandmark i:nth-child(4){height:36px}
+.brandmark i:nth-child(3){height:62px}
+
+.card{position:absolute;border:1px solid var(--border);border-radius:10px;background:linear-gradient(120deg,var(--surface-2),var(--surface));padding:22px}
+h2{display:flex;align-items:center;gap:22px;font-size:18px;font-weight:400;margin:0;height:28px}
+h2 [data-icon]{width:26px;height:26px}
+
+.output,.input,.tools{left:28px;width:466px;height:180px}
+.output{top:200px;z-index:4}
+.input{top:398px;z-index:var(--z-card)}
+.tools{top:596px}
+.spectrum{left:514px;top:200px;width:738px;height:378px}
+.player{left:514px;top:596px;width:738px;height:180px}

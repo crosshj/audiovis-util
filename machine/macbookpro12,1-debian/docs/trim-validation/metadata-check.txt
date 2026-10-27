@@ -1,0 +1,1 @@
+PASS: root ownership/mode and 76089 archive entry ownership/modes match.

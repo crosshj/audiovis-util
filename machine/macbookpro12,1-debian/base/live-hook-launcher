@@ -1,0 +1,16 @@
+#!/bin/sh
+# Minimal hook on DEBIAN: mount audiovis-util and hand off all setup work.
+set -eu
+modprobe hfsplus 2>/dev/null || :
+device=$(blkid -L audiovis-util 2>/dev/null || true)
+if [ -z "$device" ]; then
+	echo 'audiovis-util volume was not found; continuing without machine setup.' >&2
+	exit 0
+fi
+data=/media/audiovis-util
+mkdir -p "$data"
+if ! mountpoint -q "$data" && ! mount -t hfsplus -o rw "$device" "$data"; then
+	echo 'Could not mount audiovis-util; continuing without machine setup.' >&2
+	exit 0
+fi
+exec "$data/live-hook.sh"

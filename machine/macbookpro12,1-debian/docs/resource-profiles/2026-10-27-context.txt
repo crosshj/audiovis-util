@@ -1,0 +1,47 @@
+Tue Oct 27 18:32:48 UTC 2026
+0
+tty1
+Filesystem     1K-blocks    Used Available Use% Mounted on
+tmpfs            1447100 1376920     70180  96% /run/live/medium
+tmpfs            4019308   50948   3968360   2% /run/live/overlay
+/dev/sdb3       58125292  164412  57960880   1% /media/audiovis-util
+1254328	/run/live/medium/live/filesystem.squashfs
+110728	/run/live/medium/live/initrd.img
+11860	/run/live/medium/live/vmlinuz
+SDL 3.4.0: Go binding symbols loaded
+Video driver: kmsdrm
+Video driver: offscreen
+Video driver: dummy
+Video driver: evdev
+Renderer: opengl
+Renderer: opengles2
+Renderer: vulkan
+Renderer: gpu
+Renderer: software
+PASS: runtime symbols and required drivers available; physical rendering still requires a hardware test.
+libegl-mesa0:amd64	25.0.7-2+deb13u1
+libgbm1:amd64	25.0.7-2+deb13u1
+libgl1-mesa-dri:amd64	25.0.7-2+deb13u1
+  UNIT                     LOAD   ACTIVE SUB     DESCRIPTION
+  avahi-daemon.service     loaded active running Avahi mDNS/DNS-SD Stack
+  bluetooth.service        loaded active running Bluetooth service
+  cron.service             loaded active running Regular background program processing daemon
+  cups-browsed.service     loaded active running Make remote CUPS printers available locally
+  cups.service             loaded active running CUPS Scheduler
+  dbus.service             loaded active running D-Bus System Message Bus
+  getty@tty1.service       loaded active running Getty on tty1
+  smartmontools.service    loaded active running Self Monitoring and Reporting Technology (SMART) Daemon
+  ssh.service              loaded active running OpenBSD Secure Shell server
+  systemd-journald.service loaded active running Journal Service
+  systemd-logind.service   loaded active running User Login Management
+  systemd-udevd.service    loaded active running Rule-based Manager for Device Events and Files
+  user@0.service           loaded active running User Manager for UID 0
+  wpa_supplicant.service   loaded active running WPA supplicant
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+14 loaded units listed.
+50 160
+2560,1600

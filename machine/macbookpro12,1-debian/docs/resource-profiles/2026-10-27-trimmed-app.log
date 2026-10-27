@@ -1,0 +1,22 @@
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 19:32:24 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 19:32:24 Gesture input ready: trackpad contacts and click buttons feed the UI gesture layer.
+2026/10/27 19:32:24 Mouse cursor size: 60 px (default)
+2026/10/27 19:32:24 SDL renderer "opengles2", render surface 2560x1600 pixels
+2026/10/27 19:32:24 test mode: returning to console after 1m30s
+2026/10/27 19:32:30 Mouse cursor size changed: 64 px
+2026/10/27 19:32:31 Mouse cursor size changed: 60 px
+2026/10/27 19:32:31 Mouse cursor size changed: 64 px
+2026/10/27 19:32:31 Mouse cursor size changed: 68 px
+2026/10/27 19:32:31 Mouse cursor size changed: 72 px
+2026/10/27 19:32:31 Mouse cursor size changed: 76 px
+2026/10/27 19:33:07 Mouse cursor size changed: 72 px
+2026/10/27 19:33:07 Mouse cursor size changed: 64 px
+2026/10/27 19:33:07 Mouse cursor size changed: 60 px
+2026/10/27 19:33:07 Mouse cursor size changed: 56 px
+2026/10/27 19:33:07 Mouse cursor size changed: 52 px
+2026/10/27 19:33:07 Mouse cursor size changed: 48 px
+2026/10/27 19:33:07 Mouse cursor size changed: 44 px
+2026/10/27 19:33:07 Mouse cursor size changed: 40 px
+2026/10/27 19:33:07 Mouse cursor size changed: 44 px
+2026/10/27 19:33:54 SDL session ended cleanly.

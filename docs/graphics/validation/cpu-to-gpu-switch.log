@@ -1,0 +1,24 @@
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 20:13:43 GLES OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1; GPU Mesa Intel(R) Iris(R) Graphics 6100 (BDW GT3); display 2560x1600; HTML 2560x1600
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+2026/10/27 20:13:43 HTML renderer=cpu accelerated=false
+2026/10/27 20:13:43 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 20:13:44 self-test button logical=182,219 scale=2
+2026/10/27 20:13:44 JS -> Go: click 1
+2026/10/27 20:13:44 PASS: pointer click -> Go -> JS; text event -> input value
+2026/10/27 20:13:45 HTML animation_display=none
+2026/10/27 20:13:45 RESOURCE cpu_one_core_pct=25.47 peak_rss_mib=191.18
+2026/10/27 20:13:45 RESULT seconds=2.033 frames=110 fps=54.12 frames_over_25ms=2 uploads=4 html_render_ms_per_frame=1.925 upload_ms_per_upload=11.791 native_calls=1
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 20:13:45 GLES OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1; GPU Mesa Intel(R) Iris(R) Graphics 6100 (BDW GT3); display 2560x1600; HTML 2560x1600
+2026/10/27 20:13:45 GPU bridge: all 12 SDK ABI layout checks passed
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+2026/10/27 20:13:46 HTML renderer=gpu accelerated=true
+2026/10/27 20:13:46 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 20:13:47 self-test button logical=182,219 scale=2
+2026/10/27 20:13:47 JS -> Go: click 1
+2026/10/27 20:13:47 PASS: pointer click -> Go -> JS; text event -> input value
+2026/10/27 20:13:51 HTML animation_display=none
+2026/10/27 20:13:51 GPU commands_drawn=562 command_updates=12 asset_upload_bytes=817984 draw_submit_ms_per_frame=0.130 full_surface_uploads=0
+2026/10/27 20:13:51 RESOURCE cpu_one_core_pct=19.88 peak_rss_mib=181.14
+2026/10/27 20:13:51 RESULT seconds=5.001 frames=289 fps=57.79 frames_over_25ms=1 uploads=0 html_render_ms_per_frame=0.816 upload_ms_per_upload=0.000 native_calls=1

@@ -1,0 +1,391 @@
+DATE 2026-10-27T19:34:13Z
+KERNEL 6.12.107+deb13-amd64
+MODEL MacBookPro12,1
+HZ 100
+CPUS 4
+CPU_MODEL Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz
+OS debian 13
+APP_SHA256 64560d4ec03ba700d3812a8449f486f0d60791a598c33e8e76f36cb924ef6bd5  /media/audiovis-util/apps/macbookpro12,1/audio-utility
+MOUNTS_BEGIN
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev devtmpfs rw,nosuid,relatime,size=3723952k,nr_inodes=930988,mode=755,inode64 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=600,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,noexec,relatime,size=803864k,mode=755,inode64 0 0
+efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /run/live/medium tmpfs ro,relatime,size=1239296k,inode64 0 0
+/dev/loop0 /run/live/rootfs/filesystem.squashfs squashfs ro,noatime,errors=continue 0 0
+tmpfs /run/live/overlay tmpfs rw,noatime,size=4019312k,mode=755,inode64 0 0
+overlay / overlay rw,noatime,lowerdir=/run/live/rootfs/filesystem.squashfs/,upperdir=/run/live/overlay/rw,workdir=/run/live/overlay/work,redirect_dir=on,uuid=on 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev,inode64 0 0
+cgroup2 /sys/fs/cgroup cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0
+systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=41,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=315 0 0
+hugetlbfs /dev/hugepages hugetlbfs rw,nosuid,nodev,relatime,pagesize=2M 0 0
+tmpfs /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k,inode64 0 0
+debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0
+mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0
+tracefs /sys/kernel/tracing tracefs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /run/credentials/systemd-journald.service tmpfs ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap 0 0
+fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0
+configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /tmp tmpfs rw,nosuid,nodev,relatime,inode64 0 0
+binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,nosuid,nodev,noexec,relatime 0 0
+/dev/sdb3 /media/audiovis-util hfsplus rw,relatime,umask=22,uid=0,gid=0,nls=utf8 0 0
+tmpfs /run/credentials/getty@tty1.service tmpfs ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap 0 0
+tmpfs /run/user/0 tmpfs rw,nosuid,nodev,relatime,size=803860k,nr_inodes=200965,mode=700,inode64 0 0
+MOUNTS_END
+SAMPLE 0 275.82 978.60
+cpu  2901 0 6022 97861 2302 0 61 0 0 0
+ctxt 1264813
+processes 4132
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6051328 kB
+MemAvailable:    6392948 kB
+Buffers:             664 kB
+Cached:          1776872 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25472 kB
+Shmem:           1228840 kB
+Slab:              82344 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48832 kB
+LOAD 0.25 0.44 0.23 1/148 4131
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 1 277.83 986.62
+cpu  2902 0 6023 98663 2302 0 61 0 0 0
+ctxt 1265042
+processes 4140
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6051148 kB
+MemAvailable:    6392776 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25432 kB
+Shmem:           1228848 kB
+Slab:              82344 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48832 kB
+LOAD 0.25 0.44 0.23 1/148 4139
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 2 279.84 994.65
+cpu  2902 0 6024 99465 2302 0 61 0 0 0
+ctxt 1265307
+processes 4148
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6050896 kB
+MemAvailable:    6392524 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25432 kB
+Shmem:           1228848 kB
+Slab:              82348 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48836 kB
+LOAD 0.25 0.44 0.23 1/148 4147
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 3 281.85 1002.67
+cpu  2902 0 6024 100267 2302 0 61 0 0 0
+ctxt 1265521
+processes 4156
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6050896 kB
+MemAvailable:    6392524 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25432 kB
+Shmem:           1228848 kB
+Slab:              82352 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48840 kB
+LOAD 0.23 0.43 0.23 1/148 4155
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 4 283.86 1010.69
+cpu  2902 0 6026 101070 2302 0 61 0 0 0
+ctxt 1265694
+processes 4164
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6050644 kB
+MemAvailable:    6392272 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25436 kB
+Shmem:           1228848 kB
+Slab:              82356 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48844 kB
+LOAD 0.23 0.43 0.23 1/148 4163
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 5 285.88 1018.72
+cpu  2902 0 6026 101872 2302 0 61 0 0 0
+ctxt 1265900
+processes 4172
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6050644 kB
+MemAvailable:    6392272 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25432 kB
+Shmem:           1228848 kB
+Slab:              82352 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48840 kB
+LOAD 0.21 0.43 0.23 1/148 4171
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 6 287.89 1026.74
+cpu  2903 0 6027 102674 2302 0 61 0 0 0
+ctxt 1266106
+processes 4180
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6050392 kB
+MemAvailable:    6392020 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25432 kB
+Shmem:           1228848 kB
+Slab:              82352 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48840 kB
+LOAD 0.21 0.43 0.23 1/148 4179
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 7 289.90 1034.76
+cpu  2903 0 6028 103476 2302 0 61 0 0 0
+ctxt 1266315
+processes 4188
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6050140 kB
+MemAvailable:    6391768 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25436 kB
+Shmem:           1228848 kB
+Slab:              82356 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48844 kB
+LOAD 0.21 0.43 0.23 1/148 4187
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 8 291.91 1042.78
+cpu  2903 0 6028 104279 2302 0 61 0 0 0
+ctxt 1266496
+processes 4196
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6050140 kB
+MemAvailable:    6391768 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25428 kB
+Shmem:           1228848 kB
+Slab:              82348 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48836 kB
+LOAD 0.20 0.42 0.22 1/148 4195
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 9 293.92 1050.81
+cpu  2903 0 6030 105081 2302 0 61 0 0 0
+ctxt 1266694
+processes 4204
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6049888 kB
+MemAvailable:    6391516 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25320 kB
+Shmem:           1228848 kB
+Slab:              82356 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48844 kB
+LOAD 0.20 0.42 0.22 1/148 4203
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 10 295.93 1058.83
+cpu  2903 0 6030 105883 2302 0 61 0 0 0
+ctxt 1266873
+processes 4212
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6049888 kB
+MemAvailable:    6391516 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25320 kB
+Shmem:           1228848 kB
+Slab:              82360 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48848 kB
+LOAD 0.18 0.41 0.22 1/148 4211
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 11 297.94 1066.86
+cpu  2904 0 6031 106686 2302 0 61 0 0 0
+ctxt 1267078
+processes 4220
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6049636 kB
+MemAvailable:    6391264 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25432 kB
+Shmem:           1228848 kB
+Slab:              82356 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48844 kB
+LOAD 0.18 0.41 0.22 1/148 4219
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 12 299.95 1074.88
+cpu  2904 0 6032 107488 2302 0 61 0 0 0
+ctxt 1267270
+processes 4228
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6049636 kB
+MemAvailable:    6391264 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25432 kB
+Shmem:           1228848 kB
+Slab:              82356 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48844 kB
+LOAD 0.18 0.41 0.22 1/148 4227
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 13 301.96 1082.90
+cpu  2904 0 6033 108290 2302 0 61 0 0 0
+ctxt 1267467
+processes 4236
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6049384 kB
+MemAvailable:    6391012 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25432 kB
+Shmem:           1228848 kB
+Slab:              82364 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48852 kB
+LOAD 0.17 0.40 0.22 1/148 4235
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 14 303.97 1090.92
+cpu  2904 0 6034 109093 2302 0 61 0 0 0
+ctxt 1267651
+processes 4244
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6049132 kB
+MemAvailable:    6390760 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25432 kB
+Shmem:           1228848 kB
+Slab:              82352 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48840 kB
+LOAD 0.17 0.40 0.22 1/148 4243
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE
+SAMPLE 15 305.98 1098.95
+cpu  2904 0 6035 109895 2302 0 61 0 0 0
+ctxt 1267845
+processes 4252
+procs_running 1
+procs_blocked 0
+MemTotal:        8038620 kB
+MemFree:         6049132 kB
+MemAvailable:    6390760 kB
+Buffers:             664 kB
+Cached:          1776880 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+AnonPages:         25424 kB
+Shmem:           1228848 kB
+Slab:              82360 kB
+SReclaimable:      33512 kB
+SUnreclaim:        48848 kB
+LOAD 0.15 0.40 0.22 1/148 4251
+DISK    8       0 sda 345 0 13712 28 0 0 0 0 0 12 28 0 0 0 0 0 0
+DISK    8      16 sdb 7713 4628 2418783 26508 24 0 299 22 0 10892 26530 0 0 0 0 0 0
+END_SAMPLE

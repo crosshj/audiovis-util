@@ -1,0 +1,12 @@
+/* Shared tray-popover surface and content primitives. No CSS transforms needed. */
+.popover{position:absolute;z-index:var(--z-popover);width:280px;max-width:calc(100% - 24px);padding:17px 18px;background:var(--surface-tray);color:#e1e4eb;border:1px solid #626973;border-radius:12px;box-shadow:0 12px 28px #0009,0 2px 6px #0006;font:14px Inter,sans-serif;user-select:none}
+.popover[hidden]{display:none}
+.popover-heading,.popover-row{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.popover-heading{font-size:16px;margin-bottom:7px}
+.popover-secondary{font-size:13px;color:#b1b8c4;line-height:20px}
+.popover-separator{height:1px;background:#4c535d;margin:15px 0 12px}
+.popover-section-label{color:#b1b8c4;font-size:12px;margin-bottom:12px}
+.popover-text-action{font-size:13px;color:#9ac6ff;padding:4px 0}
+.popover-text-action:hover{color:#d1e5ff}
+.popover-error{color:#efa38f;font-size:12px;line-height:18px;margin-top:12px}
+.popover-error[hidden]{display:none}

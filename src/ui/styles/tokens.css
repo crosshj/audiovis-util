@@ -1,0 +1,32 @@
+@font-face{font-family:Inter;font-weight:400;src:url('../assets/fonts/Inter-Regular.woff2')}
+@font-face{font-family:Inter;font-weight:300;src:url('../assets/fonts/Inter-Light.woff2')}
+@font-face{font-family:InterDisplay;src:url('../assets/fonts/InterDisplay-Regular.woff2')}
+
+:root{
+  --bg:#171b20;
+  --text:#cbd0dc;
+  --text-strong:#e0e2eb;
+  --text-muted:#9099ab;
+  --text-soft:#9aa5ba;
+  --surface:#191e24;
+  --surface-2:#1d2228;
+  --surface-3:#232a33;
+  --surface-tray:#2b3038;
+  --border:#3b434d;
+  --border-strong:#48515d;
+  --accent:#4a8de8;
+  --accent-deep:#3689ef;
+  --danger:#ed8e82;
+  --warn:#eea07e;
+  --shadow:#0008;
+  --z-card:3;
+  --z-dropdown:10;
+  --z-popover:1000;
+  --z-modal:2000;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;width:1280px;height:800px;overflow:hidden;user-select:none;-webkit-user-select:none;cursor:none}
+body{font:18px Inter,sans-serif;color:var(--text);background:var(--bg)}
+svg{width:100%;height:100%;display:block;fill:currentColor}
+[data-icon]{display:inline-block;width:26px;height:26px;flex-shrink:0}

@@ -1,0 +1,6 @@
+PASS: operating root and OS medium are in RAM; OS medium is read-only; no swap.
+PASS: persistent data is mounted and writable.
+PASS: SSH is active, key-only, and uses the retained host identity.
+PASS: tty1 automatically logs in as root.
+SKIP: physical MacBook hardware and Broadcom Wi-Fi require a card boot.
+PASS: automatic startup completed successfully.

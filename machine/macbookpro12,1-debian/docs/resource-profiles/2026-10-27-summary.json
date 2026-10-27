@@ -1,0 +1,397 @@
+[
+  {
+    "source": "machine/macbookpro12,1-debian/docs/resource-profiles/2026-10-27-idle.txt",
+    "metadata": {
+      "DATE": "2026-10-27T18:28:59Z",
+      "KERNEL": "6.12.107+deb13-amd64",
+      "MODEL": "MacBookPro12,1",
+      "HZ": "100",
+      "CPUS": "4",
+      "CPU_MODEL": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+      "OS": "debian 13",
+      "APP_SHA256": "64560d4ec03ba700d3812a8449f486f0d60791a598c33e8e76f36cb924ef6bd5  /media/audiovis-util/apps/macbookpro12,1/audio-utility"
+    },
+    "samples": 31,
+    "elapsed_seconds": 60.30000000000001,
+    "system_cpu_percent_all_cpus": 0.13275804845668768,
+    "system_cpu_intervals": {
+      "mean": 0.1327165150914184,
+      "min": 0.0,
+      "max": 0.24875621890547264
+    },
+    "app_cpu_percent_one_core": null,
+    "memory_mib": {
+      "MemTotal": {
+        "mean": 7850.20703125,
+        "min": 7850.20703125,
+        "max": 7850.20703125
+      },
+      "MemFree": {
+        "mean": 5743.055695564516,
+        "min": 5741.19140625,
+        "max": 5745.44921875
+      },
+      "MemAvailable": {
+        "mean": 6041.802293346775,
+        "min": 6039.9453125,
+        "max": 6043.9765625
+      },
+      "Buffers": {
+        "mean": 0.65234375,
+        "min": 0.65234375,
+        "max": 0.65234375
+      },
+      "Cached": {
+        "mean": 1879.020035282258,
+        "min": 1878.80078125,
+        "max": 1879.02734375
+      },
+      "SwapTotal": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "SwapFree": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "AnonPages": {
+        "mean": 29.61063508064516,
+        "min": 29.5078125,
+        "max": 29.7890625
+      },
+      "Shmem": {
+        "mean": 1395.7027469758063,
+        "min": 1395.69140625,
+        "max": 1395.703125
+      },
+      "Slab": {
+        "mean": 111.91595262096774,
+        "min": 111.89453125,
+        "max": 111.94140625
+      },
+      "SReclaimable": {
+        "mean": 66.69493447580645,
+        "min": 66.68359375,
+        "max": 66.6953125
+      },
+      "SUnreclaim": {
+        "mean": 45.22101814516129,
+        "min": 45.19921875,
+        "max": 45.2578125
+      },
+      "Unavailable": {
+        "mean": 1808.4047379032259,
+        "min": 1806.23046875,
+        "max": 1810.26171875
+      },
+      "Nonfree": {
+        "mean": 2107.151335685484,
+        "min": 2104.7578125,
+        "max": 2109.015625
+      }
+    },
+    "app": {},
+    "disk_io_mib": {
+      "sda": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      },
+      "sdb": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      }
+    },
+    "app_gpu_engine_busy_percent": {},
+    "app_gpu_resident_mib": null
+  },
+  {
+    "source": "machine/macbookpro12,1-debian/docs/resource-profiles/2026-10-27-app-running.txt",
+    "metadata": {
+      "DATE": "2026-10-27T18:30:40Z",
+      "KERNEL": "6.12.107+deb13-amd64",
+      "MODEL": "MacBookPro12,1",
+      "HZ": "100",
+      "CPUS": "4",
+      "CPU_MODEL": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+      "OS": "debian 13",
+      "APP_SHA256": "64560d4ec03ba700d3812a8449f486f0d60791a598c33e8e76f36cb924ef6bd5  /media/audiovis-util/apps/macbookpro12,1/audio-utility"
+    },
+    "samples": 31,
+    "elapsed_seconds": 61.01999999999998,
+    "system_cpu_percent_all_cpus": 5.352941176470588,
+    "system_cpu_intervals": {
+      "mean": 5.352454637012154,
+      "min": 5.05050505050505,
+      "max": 5.786163522012578
+    },
+    "app_cpu_percent_one_core": {
+      "mean": 20.59950416948389,
+      "min": 18.719211822660352,
+      "max": 22.54901960784291
+    },
+    "memory_mib": {
+      "MemTotal": {
+        "mean": 7850.20703125,
+        "min": 7850.20703125,
+        "max": 7850.20703125
+      },
+      "MemFree": {
+        "mean": 5625.404737903225,
+        "min": 5622.8203125,
+        "max": 5630.50390625
+      },
+      "MemAvailable": {
+        "mean": 5924.238155241936,
+        "min": 5921.640625,
+        "max": 5929.34375
+      },
+      "Buffers": {
+        "mean": 0.65234375,
+        "min": 0.65234375,
+        "max": 0.65234375
+      },
+      "Cached": {
+        "mean": 1948.432837701613,
+        "min": 1948.26953125,
+        "max": 1948.45703125
+      },
+      "SwapTotal": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "SwapFree": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "AnonPages": {
+        "mean": 61.83732358870968,
+        "min": 61.1328125,
+        "max": 62.3125
+      },
+      "Shmem": {
+        "mean": 1465.108618951613,
+        "min": 1464.9453125,
+        "max": 1465.1328125
+      },
+      "Slab": {
+        "mean": 112.77280745967742,
+        "min": 112.4921875,
+        "max": 112.91015625
+      },
+      "SReclaimable": {
+        "mean": 66.83001512096774,
+        "min": 66.765625,
+        "max": 66.83984375
+      },
+      "SUnreclaim": {
+        "mean": 45.94279233870968,
+        "min": 45.7265625,
+        "max": 46.0703125
+      },
+      "Unavailable": {
+        "mean": 1925.9688760080646,
+        "min": 1920.86328125,
+        "max": 1928.56640625
+      },
+      "Nonfree": {
+        "mean": 2224.802293346774,
+        "min": 2219.703125,
+        "max": 2227.38671875
+      }
+    },
+    "app": {
+      "APP_SMAPS_Private_Clean": {
+        "mean": 54380,
+        "min": 54380,
+        "max": 54380
+      },
+      "APP_SMAPS_Private_Dirty": {
+        "mean": 31936.774193548386,
+        "min": 31224,
+        "max": 32428
+      },
+      "APP_SMAPS_Pss": {
+        "mean": 87232.45161290323,
+        "min": 86520,
+        "max": 87724
+      },
+      "APP_SMAPS_Rss": {
+        "mean": 90860.7741935484,
+        "min": 90148,
+        "max": 91352
+      },
+      "APP_SMAPS_Swap": {
+        "mean": 0,
+        "min": 0,
+        "max": 0
+      },
+      "APP_STATUS_RssAnon": {
+        "mean": 30160.774193548386,
+        "min": 29448,
+        "max": 30652
+      },
+      "APP_STATUS_RssFile": {
+        "mean": 58924,
+        "min": 58924,
+        "max": 58924
+      },
+      "APP_STATUS_RssShmem": {
+        "mean": 1776,
+        "min": 1776,
+        "max": 1776
+      },
+      "APP_STATUS_Threads": {
+        "mean": 13,
+        "min": 13,
+        "max": 13
+      },
+      "APP_STATUS_VmHWM": {
+        "mean": 91023.48387096774,
+        "min": 90556,
+        "max": 91352
+      },
+      "APP_STATUS_VmRSS": {
+        "mean": 90860.7741935484,
+        "min": 90148,
+        "max": 91352
+      },
+      "APP_STATUS_VmSize": {
+        "mean": 2403854.193548387,
+        "min": 2403680,
+        "max": 2403880
+      }
+    },
+    "disk_io_mib": {
+      "sda": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      },
+      "sdb": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0078125
+      }
+    },
+    "app_gpu_engine_busy_percent": {
+      "drm-engine-render": 12.197688757784336,
+      "drm-engine-copy": 0.0,
+      "drm-engine-video": 0.0,
+      "drm-engine-video-enhance": 0.0
+    },
+    "app_gpu_resident_mib": {
+      "mean": 69.61454133064517,
+      "min": 69.44921875,
+      "max": 69.63671875
+    }
+  },
+  {
+    "source": "machine/macbookpro12,1-debian/docs/resource-profiles/2026-10-27-after-exit.txt",
+    "metadata": {
+      "DATE": "2026-10-27T18:32:03Z",
+      "KERNEL": "6.12.107+deb13-amd64",
+      "MODEL": "MacBookPro12,1",
+      "HZ": "100",
+      "CPUS": "4",
+      "CPU_MODEL": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+      "OS": "debian 13",
+      "APP_SHA256": "64560d4ec03ba700d3812a8449f486f0d60791a598c33e8e76f36cb924ef6bd5  /media/audiovis-util/apps/macbookpro12,1/audio-utility"
+    },
+    "samples": 16,
+    "elapsed_seconds": 30.149999999999977,
+    "system_cpu_percent_all_cpus": 0.13278008298755187,
+    "system_cpu_intervals": {
+      "mean": 0.1327216653236939,
+      "min": 0.0,
+      "max": 0.24875621890547264
+    },
+    "app_cpu_percent_one_core": null,
+    "memory_mib": {
+      "MemTotal": {
+        "mean": 7850.20703125,
+        "min": 7850.20703125,
+        "max": 7850.20703125
+      },
+      "MemFree": {
+        "mean": 5737.953857421875,
+        "min": 5737.42578125,
+        "max": 5738.2734375
+      },
+      "MemAvailable": {
+        "mean": 6036.750732421875,
+        "min": 6036.22265625,
+        "max": 6037.0703125
+      },
+      "Buffers": {
+        "mean": 0.65234375,
+        "min": 0.65234375,
+        "max": 0.65234375
+      },
+      "Cached": {
+        "mean": 1879.02734375,
+        "min": 1879.02734375,
+        "max": 1879.02734375
+      },
+      "SwapTotal": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "SwapFree": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "AnonPages": {
+        "mean": 29.63134765625,
+        "min": 29.62109375,
+        "max": 29.734375
+      },
+      "Shmem": {
+        "mean": 1395.703125,
+        "min": 1395.703125,
+        "max": 1395.703125
+      },
+      "Slab": {
+        "mean": 112.467529296875,
+        "min": 112.4609375,
+        "max": 112.4765625
+      },
+      "SReclaimable": {
+        "mean": 66.78125,
+        "min": 66.78125,
+        "max": 66.78125
+      },
+      "SUnreclaim": {
+        "mean": 45.686279296875,
+        "min": 45.6796875,
+        "max": 45.6953125
+      },
+      "Unavailable": {
+        "mean": 1813.456298828125,
+        "min": 1813.13671875,
+        "max": 1813.984375
+      },
+      "Nonfree": {
+        "mean": 2112.253173828125,
+        "min": 2111.93359375,
+        "max": 2112.78125
+      }
+    },
+    "app": {},
+    "disk_io_mib": {
+      "sda": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      },
+      "sdb": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      }
+    },
+    "app_gpu_engine_busy_percent": {},
+    "app_gpu_resident_mib": null
+  }
+]

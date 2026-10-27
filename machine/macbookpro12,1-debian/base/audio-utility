@@ -1,0 +1,12 @@
+#!/bin/sh
+# Open the fullscreen app on a spare virtual terminal and return to this shell
+# when it exits. This command is manual; it is not an app-on-boot service.
+set -eu
+
+launcher=/media/audiovis-util/apps/macbookpro12,1/run-test.sh
+if [ ! -x "$launcher" ]; then
+	echo "Audio Utility launcher is missing: $launcher" >&2
+	exit 1
+fi
+
+exec "$launcher" 0

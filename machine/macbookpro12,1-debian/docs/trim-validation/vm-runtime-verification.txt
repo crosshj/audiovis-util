@@ -1,0 +1,16 @@
+PASS: approved removals, protected packages, absent printing services, and clean dpkg audit.
+SDL 3.4.0: Go binding symbols loaded
+Video driver: kmsdrm
+Video driver: offscreen
+Video driver: dummy
+Video driver: evdev
+Renderer: opengl
+Renderer: opengles2
+Renderer: vulkan
+Renderer: gpu
+Renderer: software
+PASS: runtime symbols and required drivers available; physical rendering still requires a hardware test.
+2026/10/27 19:26:20 Mouse cursor size: 60 px (default)
+2026/10/27 19:26:20 SDL renderer "opengl", render surface 1280x800 pixels
+2026/10/27 19:26:20 test mode: returning to console after 3s
+2026/10/27 19:26:23 SDL session ended cleanly.

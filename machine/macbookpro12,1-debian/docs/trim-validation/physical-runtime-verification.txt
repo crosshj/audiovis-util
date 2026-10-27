@@ -1,0 +1,22 @@
+PASS: approved removals, protected packages, absent printing services, and clean dpkg audit.
+active
+active
+active
+SDL 3.4.0: Go binding symbols loaded
+Video driver: kmsdrm
+Video driver: offscreen
+Video driver: dummy
+Video driver: evdev
+Renderer: opengl
+Renderer: opengles2
+Renderer: vulkan
+Renderer: gpu
+Renderer: software
+PASS: runtime symbols and required drivers available; physical rendering still requires a hardware test.
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 19:30:53 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 19:30:53 Gesture input ready: trackpad contacts and click buttons feed the UI gesture layer.
+2026/10/27 19:30:53 Mouse cursor size: 60 px (default)
+2026/10/27 19:30:53 SDL renderer "opengles2", render surface 2560x1600 pixels
+2026/10/27 19:30:53 test mode: returning to console after 5s
+2026/10/27 19:30:59 SDL session ended cleanly.

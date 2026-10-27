@@ -112,33 +112,10 @@ conventional desktop shell.
 
 ## Current state
 
-The app has an SDL3 windowed UI preview in `src/` for development on the host
-Mac and a machine-targeted Linux x86_64 build. GitHub Actions calls the same
-machine build script, uploads the app artifact, and publishes it for `v*` tags.
-The release workflow is present but has not yet been verified by pushing a tag
-and installing the resulting release binary on the target. The current target
-binary was built on Alpine and copied over SSH. The manual `audio-utility`
-root-shell command is in the SD-card overlay; automatic launch remains
-disabled. The overlay and runtime package paths have been inspected, but a cold
-reboot is still needed to verify the complete startup path end to end.
-The SD card stores the compiled app binary and runtime packages, not a source
-checkout. Its writable data partition contains the app binary, its VT launcher,
-and 31 SDL3/Mesa runtime APKs. The Alpine overlay contains the global manual
-command and base configuration. On boot, the base mounts the data partition and
-installs the graphics runtime into RAM; the binary stays on the data
-partition. These copies match the current working tree, but a second-card
-rebuild and cold-boot persistence check remain outstanding.
-The first target build is on the writable `audio-utility` partition. The input
-layer translates SDL and trackpad events into UI gestures, including held-click
-drags that continue when another finger is lifted and repositioned. A
-30-second fullscreen run on MacBookPro12,1 selected SDL's `opengles2` renderer
-at 2560×1600 and returned cleanly to the original virtual terminal. The audio
-surfaces still use sample data; audio device control, real Wi-Fi status,
-keyboard navigation, full pointer navigation, and the Agent Activity view
-remain future work. The cursor-size slider was exercised on the target and
-reported each selected pixel size.
-Volume and playback-position sliders use the same drag lifecycle, but remain
-visual controls until connected to an audio engine. The target has the SDL3/
-Mesa runtime APK set on the writable data partition; the boot script loads it
-into RAM. Confirm this with a cold reboot before treating boot persistence as
-fully verified.
+The Debian product app is the GPU accelerated dashboard in `src/app/`, built
+with its pinned Ultralight runtime into a self-contained amd64 bundle. It has
+passed an on-device accelerated-rendering and interaction smoke test. Alpine
+keeps its separate SDL3/musl app under `src-alpine/`; the release workflow
+builds one asset for each machine target. The dashboard controls are interactive
+prototypes, while audio device integration and automatic app launch remain
+future work. See each machine README for its app deployment and base status.

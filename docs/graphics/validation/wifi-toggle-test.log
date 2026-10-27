@@ -1,0 +1,15 @@
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 21:02:53 GLES OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1; GPU Mesa Intel(R) Iris(R) Graphics 6100 (BDW GT3); display 2560x1600; HTML 2560x1600
+2026/10/27 21:02:53 GPU bridge: all 12 SDK ABI layout checks passed
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+2026/10/27 21:02:53 HTML renderer=gpu accelerated=true
+2026/10/27 21:02:53 Wi-Fi: enabled=true connected=true blocked=false error=""
+2026/10/27 21:02:53 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 21:02:53 Battery: 52% Charging
+2026/10/27 21:02:57 Wi-Fi: enabled=false connected=false blocked=false error=""
+2026/10/27 21:03:00 Wi-Fi: enabled=true connected=false blocked=false error=""
+2026/10/27 21:03:03 Wi-Fi: enabled=true connected=true blocked=false error=""
+2026/10/27 21:03:08 Dashboard state={"duration":0,"playing":false,"mute":false,"tone":false,"record":false,"analyzer":false,"volume":80,"seek":0}
+2026/10/27 21:03:08 GPU commands_drawn=4291 command_updates=20 asset_upload_bytes=50886834 draw_submit_ms_per_frame=0.184
+2026/10/27 21:03:08 RESOURCE cpu_one_core_pct=15.31 peak_rss_mib=180.15
+2026/10/27 21:03:08 RESULT seconds=15.005 frames=834 fps=55.58 frames_over_25ms=31 html_render_ms_per_frame=0.590 native_calls=7

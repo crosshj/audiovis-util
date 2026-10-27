@@ -1,0 +1,149 @@
+	linux-vdso.so.1 (0x00007f2b8ff06000)
+	libUltralight.so => bin/libUltralight.so (0x00007f2b8fdbf000)
+	libfontconfig.so.1 => /lib/x86_64-linux-gnu/libfontconfig.so.1 (0x00007f2b8fd67000)
+	libgtk-3.so.0 => /lib/x86_64-linux-gnu/libgtk-3.so.0 (0x00007f2b8f569000)
+	libgdk-3.so.0 => /lib/x86_64-linux-gnu/libgdk-3.so.0 (0x00007f2b8f459000)
+	libpangocairo-1.0.so.0 => /lib/x86_64-linux-gnu/libpangocairo-1.0.so.0 (0x00007f2b8f446000)
+	libpango-1.0.so.0 => /lib/x86_64-linux-gnu/libpango-1.0.so.0 (0x00007f2b8f3d5000)
+	libharfbuzz.so.0 => /lib/x86_64-linux-gnu/libharfbuzz.so.0 (0x00007f2b8f294000)
+	libatk-1.0.so.0 => /lib/x86_64-linux-gnu/libatk-1.0.so.0 (0x00007f2b8f26a000)
+	libcairo-gobject.so.2 => /lib/x86_64-linux-gnu/libcairo-gobject.so.2 (0x00007f2b8f25f000)
+	libcairo.so.2 => /lib/x86_64-linux-gnu/libcairo.so.2 (0x00007f2b8f111000)
+	libgdk_pixbuf-2.0.so.0 => /lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0 (0x00007f2b8f0e1000)
+	libgio-2.0.so.0 => /lib/x86_64-linux-gnu/libgio-2.0.so.0 (0x00007f2b8eee9000)
+	libgobject-2.0.so.0 => /lib/x86_64-linux-gnu/libgobject-2.0.so.0 (0x00007f2b8ee86000)
+	libglib-2.0.so.0 => /lib/x86_64-linux-gnu/libglib-2.0.so.0 (0x00007f2b8ed2d000)
+	libUltralightCore.so => bin/libUltralightCore.so (0x00007f2b8e946000)
+	libWebCore.so => bin/libWebCore.so (0x00007f2b8af5e000)
+	librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007f2b8af59000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f2b8ae69000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f2b8ae64000)
+	libX11.so.6 => /lib/x86_64-linux-gnu/libX11.so.6 (0x00007f2b8ad1c000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f2b8ad17000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007f2b8aaaf000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f2b8aa82000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f2b8a88e000)
+	libfreetype.so.6 => /lib/x86_64-linux-gnu/libfreetype.so.6 (0x00007f2b8a7be000)
+	libexpat.so.1 => /lib/x86_64-linux-gnu/libexpat.so.1 (0x00007f2b8a790000)
+	libgmodule-2.0.so.0 => /lib/x86_64-linux-gnu/libgmodule-2.0.so.0 (0x00007f2b8a787000)
+	libpangoft2-1.0.so.0 => /lib/x86_64-linux-gnu/libpangoft2-1.0.so.0 (0x00007f2b8a76a000)
+	libfribidi.so.0 => /lib/x86_64-linux-gnu/libfribidi.so.0 (0x00007f2b8a74b000)
+	libepoxy.so.0 => /lib/x86_64-linux-gnu/libepoxy.so.0 (0x00007f2b8a61b000)
+	libXi.so.6 => /lib/x86_64-linux-gnu/libXi.so.6 (0x00007f2b8a607000)
+	libatk-bridge-2.0.so.0 => /lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0 (0x00007f2b8a5c9000)
+	libcloudproviders.so.0 => /lib/x86_64-linux-gnu/libcloudproviders.so.0 (0x00007f2b8a5af000)
+	libXfixes.so.3 => /lib/x86_64-linux-gnu/libXfixes.so.3 (0x00007f2b8a5a7000)
+	libxkbcommon.so.0 => /lib/x86_64-linux-gnu/libxkbcommon.so.0 (0x00007f2b8a55c000)
+	libwayland-client.so.0 => /lib/x86_64-linux-gnu/libwayland-client.so.0 (0x00007f2b8a549000)
+	libwayland-cursor.so.0 => /lib/x86_64-linux-gnu/libwayland-cursor.so.0 (0x00007f2b8a53f000)
+	libwayland-egl.so.1 => /lib/x86_64-linux-gnu/libwayland-egl.so.1 (0x00007f2b8a538000)
+	libXext.so.6 => /lib/x86_64-linux-gnu/libXext.so.6 (0x00007f2b8a523000)
+	libXcursor.so.1 => /lib/x86_64-linux-gnu/libXcursor.so.1 (0x00007f2b8a516000)
+	libXdamage.so.1 => /lib/x86_64-linux-gnu/libXdamage.so.1 (0x00007f2b8a511000)
+	libXcomposite.so.1 => /lib/x86_64-linux-gnu/libXcomposite.so.1 (0x00007f2b8a50c000)
+	libXrandr.so.2 => /lib/x86_64-linux-gnu/libXrandr.so.2 (0x00007f2b8a4ff000)
+	libXinerama.so.1 => /lib/x86_64-linux-gnu/libXinerama.so.1 (0x00007f2b8a4f8000)
+	libthai.so.0 => /lib/x86_64-linux-gnu/libthai.so.0 (0x00007f2b8a4ed000)
+	libgraphite2.so.3 => /lib/x86_64-linux-gnu/libgraphite2.so.3 (0x00007f2b8a4c3000)
+	libz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x00007f2b8a4a3000)
+	libpng16.so.16 => /lib/x86_64-linux-gnu/libpng16.so.16 (0x00007f2b8a46a000)
+	libXrender.so.1 => /lib/x86_64-linux-gnu/libXrender.so.1 (0x00007f2b8a45b000)
+	libxcb.so.1 => /lib/x86_64-linux-gnu/libxcb.so.1 (0x00007f2b8a430000)
+	libxcb-render.so.0 => /lib/x86_64-linux-gnu/libxcb-render.so.0 (0x00007f2b8a421000)
+	libxcb-shm.so.0 => /lib/x86_64-linux-gnu/libxcb-shm.so.0 (0x00007f2b8a41c000)
+	libpixman-1.so.0 => /lib/x86_64-linux-gnu/libpixman-1.so.0 (0x00007f2b8a36f000)
+	libjpeg.so.62 => /lib/x86_64-linux-gnu/libjpeg.so.62 (0x00007f2b8a2d6000)
+	libmount.so.1 => /lib/x86_64-linux-gnu/libmount.so.1 (0x00007f2b8a25a000)
+	libselinux.so.1 => /lib/x86_64-linux-gnu/libselinux.so.1 (0x00007f2b8a226000)
+	libffi.so.8 => /lib/x86_64-linux-gnu/libffi.so.8 (0x00007f2b8a219000)
+	libatomic.so.1 => /lib/x86_64-linux-gnu/libatomic.so.1 (0x00007f2b8a20f000)
+	libpcre2-8.so.0 => /lib/x86_64-linux-gnu/libpcre2-8.so.0 (0x00007f2b8a15e000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f2b8ff08000)
+	libbz2.so.1.0 => /lib/x86_64-linux-gnu/libbz2.so.1.0 (0x00007f2b8a14b000)
+	libbrotlidec.so.1 => /lib/x86_64-linux-gnu/libbrotlidec.so.1 (0x00007f2b8a13d000)
+	libatspi.so.0 => /lib/x86_64-linux-gnu/libatspi.so.0 (0x00007f2b8a0ff000)
+	libdbus-1.so.3 => /lib/x86_64-linux-gnu/libdbus-1.so.3 (0x00007f2b8a0a6000)
+	libdatrie.so.1 => /lib/x86_64-linux-gnu/libdatrie.so.1 (0x00007f2b8a09c000)
+	libXau.so.6 => /lib/x86_64-linux-gnu/libXau.so.6 (0x00007f2b8a097000)
+	libXdmcp.so.6 => /lib/x86_64-linux-gnu/libXdmcp.so.6 (0x00007f2b8a08f000)
+	libblkid.so.1 => /lib/x86_64-linux-gnu/libblkid.so.1 (0x00007f2b8a02c000)
+	libbrotlicommon.so.1 => /lib/x86_64-linux-gnu/libbrotlicommon.so.1 (0x00007f2b8a009000)
+	libsystemd.so.0 => /lib/x86_64-linux-gnu/libsystemd.so.0 (0x00007f2b89ef3000)
+	libcap.so.2 => /lib/x86_64-linux-gnu/libcap.so.2 (0x00007f2b89ee7000)
+
+SDK version requirements
+  3460:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  3464:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  3468:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  346c:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  3470:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  3474:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  3478:   1 (*global*)      1 (*global*)      1 (*global*)   
+
+Version needs section '.gnu.version_r' contains 7 entries:
+ Addr: 0x000000000013a1b8  Offset: 0x0013a1b8  Link: 4 (.dynstr)
+  000000: Version: 1  File: ld-linux-x86-64.so.2  Cnt: 1
+  0x0010:   Name: GLIBC_2.3  Flags: none  Version: 28
+  0x0020: Version: 1  File: libstdc++.so.6  Cnt: 10
+  0x0030:   Name: GLIBCXX_3.4.14  Flags: none  Version: 26
+  0x0040:   Name: GLIBCXX_3.4.9  Flags: none  Version: 25
+  0x0050:   Name: GLIBCXX_3.4.19  Flags: none  Version: 24
+  0x0060:   Name: CXXABI_1.3.5  Flags: none  Version: 21
+  0x0070:   Name: CXXABI_1.3  Flags: none  Version: 20
+  0x0080:   Name: GLIBCXX_3.4.21  Flags: none  Version: 17
+  0x0090:   Name: GLIBCXX_3.4  Flags: none  Version: 15
+  0x00a0:   Name: GLIBCXX_3.4.20  Flags: none  Version: 11
+  0x00b0:   Name: GLIBCXX_3.4.11  Flags: none  Version: 10
+  0x00c0:   Name: GLIBCXX_3.4.26  Flags: none  Version: 8
+  0x00d0: Version: 1  File: libdl.so.2  Cnt: 1
+  0x00e0:   Name: GLIBC_2.2.5  Flags: none  Version: 7
+  0x00f0: Version: 1  File: libgcc_s.so.1  Cnt: 1
+  0x0100:   Name: GCC_3.0  Flags: none  Version: 6
+  0x0110: Version: 1  File: libm.so.6  Cnt: 3
+  0x0120:   Name: GLIBC_2.27  Flags: none  Version: 23
+  0x0130:   Name: GLIBC_2.29  Flags: none  Version: 12
+  0x0140:   Name: GLIBC_2.2.5  Flags: none  Version: 5
+  0x0150: Version: 1  File: libc.so.6  Cnt: 10
+  0x0160:   Name: GLIBC_2.3.2  Flags: none  Version: 29
+  0x0170:   Name: GLIBC_2.14  Flags: none  Version: 27
+  0x0180:   Name: GLIBC_2.26  Flags: none  Version: 22
+  0x0190:   Name: GLIBC_2.17  Flags: none  Version: 19
+  0x01a0:   Name: GLIBC_2.3.4  Flags: none  Version: 16
+  0x01b0:   Name: GLIBC_2.3  Flags: none  Version: 14
+  0x01c0:   Name: GLIBC_2.28  Flags: none  Version: 13
+  0x01d0:   Name: GLIBC_2.7  Flags: none  Version: 9
+  0x01e0:   Name: GLIBC_2.25  Flags: none  Version: 4
+  0x01f0:   Name: GLIBC_2.2.5  Flags: none  Version: 3
+  0x0200: Version: 1  File: libpthread.so.0  Cnt: 2
+  0x0210:   Name: GLIBC_2.3.2  Flags: none  Version: 18
+  0x0220:   Name: GLIBC_2.2.5  Flags: none  Version: 2
+
+CPU
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  4
+On-line CPU(s) list:                     0-3
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz
+CPU family:                              6
+Model:                                   61
+Thread(s) per core:                      2
+Core(s) per socket:                      2
+Socket(s):                               1
+Stepping:                                4
+CPU(s) scaling MHz:                      100%
+CPU max MHz:                             3100.0000
+CPU min MHz:                             500.0000
+BogoMIPS:                                5399.82
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts vnmi md_clear flush_l1d
+Virtualization:                          VT-x
+L1d cache:                               64 KiB (2 instances)
+L1i cache:                               64 KiB (2 instances)
+L2 cache:                                512 KiB (2 instances)
+L3 cache:                                3 MiB (1 instance)
+NUMA node(s):                            1
+
+Console
+tty1

@@ -1,0 +1,42 @@
+Tue Oct 27 19:31:12 UTC 2026
+Linux debian 6.12.107+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.107-1 (2026-08-29) x86_64 GNU/Linux
+c26eb3afe6de2db98f786bfff782c34acf433116a2f0c97d81cc8aeaea4cde50  /run/live/medium/live/filesystem.squashfs
+1179012	/run/live/medium
+48508	/run/live/overlay
+Filesystem     1K-blocks    Used Available Use% Mounted on
+overlay          4019312   48508   3970804   2% /
+tmpfs            1239296 1179012     60284  96% /run/live/medium
+tmpfs            4019312   48508   3970804   2% /run/live/overlay
+/dev/sdb3       58125292 2475304  55649988   5% /media/audiovis-util
+UNIT                     LOAD   ACTIVE SUB     DESCRIPTION
+avahi-daemon.service     loaded active running Avahi mDNS/DNS-SD Stack
+bluetooth.service        loaded active running Bluetooth service
+cron.service             loaded active running Regular background program processing daemon
+dbus.service             loaded active running D-Bus System Message Bus
+getty@tty1.service       loaded active running Getty on tty1
+smartmontools.service    loaded active running Self Monitoring and Reporting Technology (SMART) Daemon
+ssh.service              loaded active running OpenBSD Secure Shell server
+systemd-journald.service loaded active running Journal Service
+systemd-logind.service   loaded active running User Login Management
+systemd-udevd.service    loaded active running Rule-based Manager for Device Events and Files
+user@0.service           loaded active running User Manager for UID 0
+wpa_supplicant.service   loaded active running WPA supplicant
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+12 loaded units listed.
+2560,1600
+50 160
+tty1
+NAME     SIZE FSTYPE   LABEL         MOUNTPOINTS
+loop0      1G squashfs               /run/live/rootfs/filesystem.squashfs
+sda      113G                        
+├─sda1   200M vfat     EFI           
+└─sda2 112.8G apfs                   
+sdb     59.5G                        
+├─sdb1   200M vfat     EFI           
+├─sdb2   3.7G vfat     DEBIAN        
+└─sdb3  55.4G hfsplus  audiovis-util /media/audiovis-util
+Filename				Type		Size		Used		Priority

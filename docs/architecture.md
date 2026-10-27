@@ -7,23 +7,23 @@ The system has two separately developed layers.
 The base boots Linux, supports the target machine's devices, brings up Wi-Fi,
 and provides the runtime and remote access needed for development. Its boot,
 firmware, network, and recovery details belong under `machine/<machine-id>/`.
-The current supported base is Alpine on `MacBookPro12,1`.
+The supported bases are Alpine and Debian on `MacBookPro12,1`.
 
 ## Audio Utility app
 
 The app is the user's environment. It renders the display, owns the pointer and
 input, presents connectivity and system status, and hosts the workstation's
 audio tools. It should not assume a desktop environment or window manager.
-Product code belongs in `src/`; product decisions and milestones belong in
-`docs/`.
+The Debian product app lives in `src/`; the established Alpine SDL app is
+preserved in `src-alpine/`. Product decisions and milestones belong in `docs/`.
 
 ## Display and input path
 
-The Go app is the user-facing display environment. It runs directly on a Linux
-virtual terminal and uses SDL3's KMS/DRM video backend to take control of the
-display and input devices. It does not depend on X11, Wayland, a window manager,
-or a desktop session. The graphics path uses the kernel's DRM/KMS device,
-EGL/GBM, and OpenGL; SDL handles display modes and keyboard/pointer events.
+The user-facing Debian app is a fullscreen Go dashboard using Ultralight's GPU
+renderer on an SDL-owned GLES context. It runs directly on a Linux virtual
+terminal through KMS/DRM and does not depend on a window manager or desktop
+session. The established Alpine output remains a separate SDL3 app built for
+musl; the two machine targets deliberately have independent app binaries.
 
 The MacBookPro12,1 has passed a fullscreen SDL3 KMSDRM/OpenGL smoke test: SDL
 acquired the built-in 2560×1600 display, Mesa reported Intel Iris Graphics 6100
@@ -41,27 +41,26 @@ input still need their own verification.
 
 ## Input and gesture boundary
 
-Machine adapters translate SDL mouse events and raw trackpad contacts into a
-shared input stream. The gesture recognizer turns that stream into pointer
-movement, press/release, and drag start/move/end events. UI controls consume
-those events rather than reading SDL or trackpad slots directly. A held click
+Each app target translates SDL mouse events and raw trackpad contacts into its
+local event stream. A gesture recognizer turns that stream into pointer
+movement, press/release, and drag start/move/end events. In Debian, the
+recognizer and trackpad adapter live together in `src/internal/system/`; Alpine keeps an
+independent copy in its own source module. UI controls consume gestures rather
+than reading SDL or trackpad slots directly. A held click
 is tracked separately from finger contacts: another finger can move the
 pointer during a drag, lifting and repositioning that finger keeps the drag
 active, and lifting the contact that began the click releases the drag even if
 SDL omits its button-up event. The development Mac's windowed preview uses SDL
 pointer events through the same UI gesture path.
 
-The first Go app build has also run fullscreen on this target. It loaded the
-base's system `libSDL3.so.0`, selected the `opengles2` renderer, rendered at
-2560×1600 for 30 seconds, and returned cleanly to the original VT. The binary
-is stored under `/media/audio-utility/apps/macbookpro12,1/`; the test launcher
-is in `machine/macbookpro12,1/app/`. This checks the Go/SDL deployment path,
-but the UI is still sample content and keyboard, pointer, Wi-Fi UI, and audio
-device behavior remain unverified.
+The Debian Ultralight dashboard has passed an on-device accelerated-renderer
+and interaction smoke test on this target. The Alpine SDL app remains separately
+built and deployed through `machine/macbookpro12,1-alpine/app/`. The dashboard
+controls are prototype content and do not yet operate audio devices.
 
 Each supported machine describes its release target in its machine folder.
-Release automation builds a compatible app asset per machine, rather than
-assuming one binary and runtime will work everywhere.
+Release automation publishes two machine-compatible assets: a musl Alpine
+binary and a Debian amd64 dashboard bundle with its graphics runtime.
 
 The interface between the layers should stay small and explicit: the base
 provides device access, networking, audio/input/graphics support, persistence,

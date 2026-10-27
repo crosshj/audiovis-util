@@ -1,0 +1,504 @@
+[
+  {
+    "source": "machine/macbookpro12,1-alpine/docs/resource-profiles/2026-10-27-idle.txt",
+    "metadata": {
+      "DATE": "2026-10-27T18:04:10Z",
+      "KERNEL": "6.18.58-0-lts",
+      "MODEL": "MacBookPro12,1",
+      "HZ": "100",
+      "CPUS": "4",
+      "CPU_MODEL": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+      "OS": "3.24.3",
+      "APP_SHA256": "40cfc8125f3f9c7feb7e79d6fd34b2d8ba1e6aaef0e5e494862e782b64b58573  /media/audio-utility/apps/macbookpro12,1/audio-utility"
+    },
+    "samples": 31,
+    "elapsed_seconds": 60.23000000000047,
+    "system_cpu_percent_all_cpus": 0.18686931605830323,
+    "system_cpu_intervals": {
+      "mean": 0.18675835179977227,
+      "min": 0.0,
+      "max": 0.373134328358209
+    },
+    "app_cpu_percent_one_core": null,
+    "memory_mib": {
+      "MemTotal": {
+        "mean": 7848.3359375,
+        "min": 7848.3359375,
+        "max": 7848.3359375
+      },
+      "MemFree": {
+        "mean": 7316.2690272177415,
+        "min": 7315.3203125,
+        "max": 7316.890625
+      },
+      "MemAvailable": {
+        "mean": 7455.623235887097,
+        "min": 7454.67578125,
+        "max": 7456.24609375
+      },
+      "Buffers": {
+        "mean": 1.51171875,
+        "min": 1.51171875,
+        "max": 1.51171875
+      },
+      "Cached": {
+        "mean": 387.6328125,
+        "min": 387.6328125,
+        "max": 387.6328125
+      },
+      "SwapTotal": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "SwapFree": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "AnonPages": {
+        "mean": 5.203377016129032,
+        "min": 5.1015625,
+        "max": 5.23046875
+      },
+      "Shmem": {
+        "mean": 40.890625,
+        "min": 40.890625,
+        "max": 40.890625
+      },
+      "Slab": {
+        "mean": 49.59097782258065,
+        "min": 49.515625,
+        "max": 49.59765625
+      },
+      "SReclaimable": {
+        "mean": 19.489667338709676,
+        "min": 19.4140625,
+        "max": 19.4921875
+      },
+      "SUnreclaim": {
+        "mean": 30.101310483870968,
+        "min": 30.09765625,
+        "max": 30.10546875
+      },
+      "Unavailable": {
+        "mean": 392.71270161290323,
+        "min": 392.08984375,
+        "max": 393.66015625
+      },
+      "Nonfree": {
+        "mean": 532.066910282258,
+        "min": 531.4453125,
+        "max": 533.015625
+      }
+    },
+    "app": {},
+    "disk_io_mib": {
+      "sda": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      },
+      "sdb": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      }
+    },
+    "app_gpu_engine_busy_percent": {},
+    "app_gpu_resident_mib": null
+  },
+  {
+    "source": "machine/macbookpro12,1-alpine/docs/resource-profiles/2026-10-27-runtime-idle.txt",
+    "metadata": {
+      "DATE": "2026-10-27T18:07:12Z",
+      "KERNEL": "6.18.58-0-lts",
+      "MODEL": "MacBookPro12,1",
+      "HZ": "100",
+      "CPUS": "4",
+      "CPU_MODEL": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+      "OS": "3.24.3",
+      "APP_SHA256": "40cfc8125f3f9c7feb7e79d6fd34b2d8ba1e6aaef0e5e494862e782b64b58573  /media/audio-utility/apps/macbookpro12,1/audio-utility"
+    },
+    "samples": 31,
+    "elapsed_seconds": 60.23000000000047,
+    "system_cpu_percent_all_cpus": 0.17438963627304435,
+    "system_cpu_intervals": {
+      "mean": 0.1742123730539827,
+      "min": 0.0,
+      "max": 0.49627791563275436
+    },
+    "app_cpu_percent_one_core": null,
+    "memory_mib": {
+      "MemTotal": {
+        "mean": 7848.3359375,
+        "min": 7848.3359375,
+        "max": 7848.3359375
+      },
+      "MemFree": {
+        "mean": 6977.140625,
+        "min": 6973.34375,
+        "max": 6982.7421875
+      },
+      "MemAvailable": {
+        "mean": 7202.135206653225,
+        "min": 7198.33984375,
+        "max": 7207.73046875
+      },
+      "Buffers": {
+        "mean": 1.51171875,
+        "min": 1.51171875,
+        "max": 1.51171875
+      },
+      "Cached": {
+        "mean": 714.02734375,
+        "min": 714.02734375,
+        "max": 714.02734375
+      },
+      "SwapTotal": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "SwapFree": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "AnonPages": {
+        "mean": 5.206023185483871,
+        "min": 5.04296875,
+        "max": 5.23828125
+      },
+      "Shmem": {
+        "mean": 283.08984375,
+        "min": 283.08984375,
+        "max": 283.08984375
+      },
+      "Slab": {
+        "mean": 52.95539314516129,
+        "min": 52.92578125,
+        "max": 52.9765625
+      },
+      "SReclaimable": {
+        "mean": 22.375882056451612,
+        "min": 22.36328125,
+        "max": 22.37890625
+      },
+      "SUnreclaim": {
+        "mean": 30.579511088709676,
+        "min": 30.5625,
+        "max": 30.59765625
+      },
+      "Unavailable": {
+        "mean": 646.2007308467741,
+        "min": 640.60546875,
+        "max": 649.99609375
+      },
+      "Nonfree": {
+        "mean": 871.1953125,
+        "min": 865.59375,
+        "max": 874.9921875
+      }
+    },
+    "app": {},
+    "disk_io_mib": {
+      "sda": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      },
+      "sdb": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      }
+    },
+    "app_gpu_engine_busy_percent": {},
+    "app_gpu_resident_mib": null
+  },
+  {
+    "source": "machine/macbookpro12,1-alpine/docs/resource-profiles/2026-10-27-app-running.txt",
+    "metadata": {
+      "DATE": "2026-10-27T18:08:53Z",
+      "KERNEL": "6.18.58-0-lts",
+      "MODEL": "MacBookPro12,1",
+      "HZ": "100",
+      "CPUS": "4",
+      "CPU_MODEL": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+      "OS": "3.24.3",
+      "APP_SHA256": "40cfc8125f3f9c7feb7e79d6fd34b2d8ba1e6aaef0e5e494862e782b64b58573  /media/audio-utility/apps/macbookpro12,1/audio-utility"
+    },
+    "samples": 31,
+    "elapsed_seconds": 60.67999999999938,
+    "system_cpu_percent_all_cpus": 6.252346193952033,
+    "system_cpu_intervals": {
+      "mean": 6.2522770701682555,
+      "min": 5.889724310776942,
+      "max": 6.866416978776529
+    },
+    "app_cpu_percent_one_core": {
+      "mean": 18.22668227413892,
+      "min": 16.831683168320772,
+      "max": 19.80198019801552
+    },
+    "memory_mib": {
+      "MemTotal": {
+        "mean": 7848.3359375,
+        "min": 7848.3359375,
+        "max": 7848.3359375
+      },
+      "MemFree": {
+        "mean": 6879.373361895161,
+        "min": 6874.44140625,
+        "max": 6884.55859375
+      },
+      "MemAvailable": {
+        "mean": 7104.534778225807,
+        "min": 7099.6015625,
+        "max": 7109.7109375
+      },
+      "Buffers": {
+        "mean": 1.51171875,
+        "min": 1.51171875,
+        "max": 1.51171875
+      },
+      "Cached": {
+        "mean": 785.7245463709677,
+        "min": 785.6640625,
+        "max": 785.7890625
+      },
+      "SwapTotal": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "SwapFree": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "AnonPages": {
+        "mean": 33.84740423387097,
+        "min": 33.421875,
+        "max": 34.2109375
+      },
+      "Shmem": {
+        "mean": 354.78704637096774,
+        "min": 354.7265625,
+        "max": 354.8515625
+      },
+      "Slab": {
+        "mean": 54.556703629032256,
+        "min": 54.03125,
+        "max": 54.70703125
+      },
+      "SReclaimable": {
+        "mean": 22.709551411290324,
+        "min": 22.69140625,
+        "max": 22.72265625
+      },
+      "SUnreclaim": {
+        "mean": 31.847152217741936,
+        "min": 31.33984375,
+        "max": 31.984375
+      },
+      "Unavailable": {
+        "mean": 743.8011592741935,
+        "min": 738.625,
+        "max": 748.734375
+      },
+      "Nonfree": {
+        "mean": 968.9625756048387,
+        "min": 963.77734375,
+        "max": 973.89453125
+      }
+    },
+    "app": {
+      "APP_SMAPS_Private_Clean": {
+        "mean": 3048,
+        "min": 3048,
+        "max": 3048
+      },
+      "APP_SMAPS_Private_Dirty": {
+        "mean": 77924.7741935484,
+        "min": 77488,
+        "max": 78288
+      },
+      "APP_SMAPS_Pss": {
+        "mean": 81032.16129032258,
+        "min": 80595,
+        "max": 81394
+      },
+      "APP_SMAPS_Rss": {
+        "mean": 81656.7741935484,
+        "min": 81220,
+        "max": 82020
+      },
+      "APP_SMAPS_Swap": {
+        "mean": 0,
+        "min": 0,
+        "max": 0
+      },
+      "APP_STATUS_RssAnon": {
+        "mean": 27484.774193548386,
+        "min": 27048,
+        "max": 27848
+      },
+      "APP_STATUS_RssFile": {
+        "mean": 3052,
+        "min": 3052,
+        "max": 3052
+      },
+      "APP_STATUS_RssShmem": {
+        "mean": 51120,
+        "min": 51120,
+        "max": 51120
+      },
+      "APP_STATUS_Threads": {
+        "mean": 13,
+        "min": 13,
+        "max": 13
+      },
+      "APP_STATUS_VmHWM": {
+        "mean": 81745.54838709677,
+        "min": 81628,
+        "max": 82020
+      },
+      "APP_STATUS_VmRSS": {
+        "mean": 81656.7741935484,
+        "min": 81220,
+        "max": 82020
+      },
+      "APP_STATUS_VmSize": {
+        "mean": 1505288,
+        "min": 1505224,
+        "max": 1505352
+      }
+    },
+    "disk_io_mib": {
+      "sda": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      },
+      "sdb": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      }
+    },
+    "app_gpu_engine_busy_percent": {
+      "drm-engine-render": 13.160366776532765,
+      "drm-engine-copy": 0.0,
+      "drm-engine-video": 0.0,
+      "drm-engine-video-enhance": 0.0
+    },
+    "app_gpu_resident_mib": {
+      "mean": 69.88671875,
+      "min": 69.82421875,
+      "max": 69.94921875
+    }
+  },
+  {
+    "source": "machine/macbookpro12,1-alpine/docs/resource-profiles/2026-10-27-after-exit.txt",
+    "metadata": {
+      "DATE": "2026-10-27T18:10:33Z",
+      "KERNEL": "6.18.58-0-lts",
+      "MODEL": "MacBookPro12,1",
+      "HZ": "100",
+      "CPUS": "4",
+      "CPU_MODEL": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+      "OS": "3.24.3",
+      "APP_SHA256": "40cfc8125f3f9c7feb7e79d6fd34b2d8ba1e6aaef0e5e494862e782b64b58573  /media/audio-utility/apps/macbookpro12,1/audio-utility"
+    },
+    "samples": 16,
+    "elapsed_seconds": 30.11999999999989,
+    "system_cpu_percent_all_cpus": 0.18270907731915953,
+    "system_cpu_intervals": {
+      "mean": 0.18258670233076266,
+      "min": 0.0,
+      "max": 0.373134328358209
+    },
+    "app_cpu_percent_one_core": null,
+    "memory_mib": {
+      "MemTotal": {
+        "mean": 7848.3359375,
+        "min": 7848.3359375,
+        "max": 7848.3359375
+      },
+      "MemFree": {
+        "mean": 7001.187744140625,
+        "min": 7000.75,
+        "max": 7001.7890625
+      },
+      "MemAvailable": {
+        "mean": 7226.324462890625,
+        "min": 7225.88671875,
+        "max": 7226.92578125
+      },
+      "Buffers": {
+        "mean": 1.51171875,
+        "min": 1.51171875,
+        "max": 1.51171875
+      },
+      "Cached": {
+        "mean": 716.0546875,
+        "min": 716.0546875,
+        "max": 716.0546875
+      },
+      "SwapTotal": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "SwapFree": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "AnonPages": {
+        "mean": 5.20849609375,
+        "min": 5.15625,
+        "max": 5.21875
+      },
+      "Shmem": {
+        "mean": 285.1171875,
+        "min": 285.1171875,
+        "max": 285.1171875
+      },
+      "Slab": {
+        "mean": 54.161376953125,
+        "min": 54.13671875,
+        "max": 54.23046875
+      },
+      "SReclaimable": {
+        "mean": 22.66015625,
+        "min": 22.66015625,
+        "max": 22.66015625
+      },
+      "SUnreclaim": {
+        "mean": 31.501220703125,
+        "min": 31.4765625,
+        "max": 31.5703125
+      },
+      "Unavailable": {
+        "mean": 622.011474609375,
+        "min": 621.41015625,
+        "max": 622.44921875
+      },
+      "Nonfree": {
+        "mean": 847.148193359375,
+        "min": 846.546875,
+        "max": 847.5859375
+      }
+    },
+    "app": {},
+    "disk_io_mib": {
+      "sda": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      },
+      "sdb": {
+        "read_sectors": 0.0,
+        "write_sectors": 0.0
+      }
+    },
+    "app_gpu_engine_busy_percent": {},
+    "app_gpu_resident_mib": null
+  }
+]

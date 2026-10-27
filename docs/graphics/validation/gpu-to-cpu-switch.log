@@ -1,0 +1,24 @@
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 20:14:25 GLES OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1; GPU Mesa Intel(R) Iris(R) Graphics 6100 (BDW GT3); display 2560x1600; HTML 2560x1600
+2026/10/27 20:14:25 GPU bridge: all 12 SDK ABI layout checks passed
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+2026/10/27 20:14:25 HTML renderer=gpu accelerated=true
+2026/10/27 20:14:25 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 20:14:26 self-test button logical=182,219 scale=2
+2026/10/27 20:14:26 JS -> Go: click 1
+2026/10/27 20:14:26 PASS: pointer click -> Go -> JS; text event -> input value
+2026/10/27 20:14:27 HTML animation_display=none
+2026/10/27 20:14:27 GPU commands_drawn=205 command_updates=4 asset_upload_bytes=418048 draw_submit_ms_per_frame=0.121 full_surface_uploads=0
+2026/10/27 20:14:27 RESOURCE cpu_one_core_pct=22.24 peak_rss_mib=153.09
+2026/10/27 20:14:27 RESULT seconds=2.032 frames=111 fps=54.64 frames_over_25ms=1 uploads=0 html_render_ms_per_frame=1.747 upload_ms_per_upload=0.000 native_calls=1
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 20:14:28 GLES OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1; GPU Mesa Intel(R) Iris(R) Graphics 6100 (BDW GT3); display 2560x1600; HTML 2560x1600
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+2026/10/27 20:14:28 HTML renderer=cpu accelerated=false
+2026/10/27 20:14:28 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 20:14:29 self-test button logical=182,219 scale=2
+2026/10/27 20:14:29 JS -> Go: click 1
+2026/10/27 20:14:29 PASS: pointer click -> Go -> JS; text event -> input value
+2026/10/27 20:14:33 HTML animation_display=none
+2026/10/27 20:14:33 RESOURCE cpu_one_core_pct=20.25 peak_rss_mib=190.99
+2026/10/27 20:14:33 RESULT seconds=5.016 frames=289 fps=57.61 frames_over_25ms=2 uploads=12 html_render_ms_per_frame=0.855 upload_ms_per_upload=13.212 native_calls=1

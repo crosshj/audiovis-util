@@ -1,0 +1,20 @@
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 21:11:44 GLES OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1; GPU Mesa Intel(R) Iris(R) Graphics 6100 (BDW GT3); display 2560x1600; HTML 2560x1600
+2026/10/27 21:11:44 GPU bridge: all 12 SDK ABI layout checks passed
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+2026/10/27 21:11:44 HTML renderer=gpu accelerated=true
+2026/10/27 21:11:45 Wi-Fi: enabled=true connected=true blocked=false error=""
+2026/10/27 21:11:45 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 21:11:45 Battery: 58% Charging
+2026/10/27 21:11:46 Date/time save completed: error=""
+2026/10/27 21:11:49 Dashboard state={"duration":0,"playing":false,"mute":false,"tone":false,"record":false,"analyzer":false,"volume":80,"seek":0}
+2026/10/27 21:11:49 GPU commands_drawn=1350 command_updates=7 asset_upload_bytes=17942321 draw_submit_ms_per_frame=0.190
+2026/10/27 21:11:49 RESOURCE cpu_one_core_pct=17.68 peak_rss_mib=174.35
+2026/10/27 21:11:49 RESULT seconds=5.017 frames=272 fps=54.22 frames_over_25ms=9 html_render_ms_per_frame=0.975 native_calls=7
+               Local time: Tue 2026-10-27 21:11:49 UTC
+           Universal time: Tue 2026-10-27 21:11:49 UTC
+                 RTC time: Tue 2026-10-27 21:11:50
+                Time zone: Etc/UTC (UTC, +0000)
+System clock synchronized: no
+              NTP service: n/a
+          RTC in local TZ: no

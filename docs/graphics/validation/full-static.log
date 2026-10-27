@@ -1,0 +1,6 @@
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 19:55:36 GLES OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1; GPU Mesa Intel(R) Iris(R) Graphics 6100 (BDW GT3); display 2560x1600; HTML 2560x1600
+2026/10/27 19:55:36 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 19:55:51 RESOURCE cpu_one_core_pct=45.14 peak_rss_mib=200.87
+2026/10/27 19:55:51 RESULT seconds=15.010 frames=887 fps=59.09 frames_over_25ms=2 uploads=264 html_render_ms_per_frame=1.519 upload_ms_per_upload=12.374 native_calls=0

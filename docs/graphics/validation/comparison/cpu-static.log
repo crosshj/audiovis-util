@@ -1,0 +1,8 @@
+ERROR: Failed to get evdev touchscreen name
+2026/10/27 20:14:45 GLES OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1; GPU Mesa Intel(R) Iris(R) Graphics 6100 (BDW GT3); display 2560x1600; HTML 2560x1600
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+2026/10/27 20:14:45 HTML renderer=cpu accelerated=false
+2026/10/27 20:14:45 Trackpad input: /dev/input/event8, X=-4828..5345 Y=-203..6803 slots=0..15
+2026/10/27 20:15:05 HTML animation_display=none
+2026/10/27 20:15:05 RESOURCE cpu_one_core_pct=13.25 peak_rss_mib=192.21
+2026/10/27 20:15:05 RESULT seconds=20.010 frames=1189 fps=59.42 frames_over_25ms=1 uploads=1 html_render_ms_per_frame=0.162 upload_ms_per_upload=3.903 native_calls=0

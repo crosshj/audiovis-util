@@ -1,0 +1,34 @@
+.dropdown{z-index:var(--z-dropdown);height:42px;margin-top:16px;border:1px solid var(--border-strong);border-radius:8px;background:#191e23;display:flex;align-items:center;justify-content:space-between;padding:0 14px;position:relative;font-size:18px;font-weight:300}
+.dropdown>[data-icon]{width:15px;height:15px}
+.options{display:none;position:absolute;top:46px;left:-1px;right:-1px;background:var(--surface-3);border:1px solid #586579;border-radius:7px;overflow:hidden;box-shadow:0 8px 18px var(--shadow)}
+.dropdown.open .options{display:block}
+.option{padding:12px 14px}
+.option:hover{background:#35485f}
+
+#meter{display:flex;justify-content:space-between;margin-top:26px;height:24px}
+#meter i{width:6px;border-radius:3px;background:#353b45}
+#meter i.green{background:linear-gradient(#9edb85,#69bc7a)}
+#meter i.orange{background:linear-gradient(#efa76b,#d78b57)}
+
+.tool-row{display:flex;justify-content:space-between;margin-top:16px}
+.tool{width:130px;height:96px;border:1px solid #46505c;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:13px;font-size:17px;font-weight:300}
+.tool>[data-icon],.tool>svg{width:32px;height:32px}
+.tool:hover,.tool.active{background:#28323e;border-color:#6d8fb8}
+#record.active{color:var(--danger)}
+
+.live{position:absolute;right:24px;top:27px;color:#a0a9bc;font-size:16px}
+.plot{position:absolute;left:58px;right:20px;top:64px;height:256px;border:1px solid #303943;border-radius:8px;background:repeating-linear-gradient(to bottom,transparent 0,transparent 50px,#303740 51px),repeating-linear-gradient(to right,transparent 0,transparent 57px,#2a3139 58px);overflow:hidden}
+#bars{position:absolute;inset:12px 4px 0;display:flex;align-items:flex-end;justify-content:space-between}
+#bars i{width:10px;background:linear-gradient(#56a3ed,#41557e);border-top:1px solid #7eb8ee}
+.y-labels{position:absolute;left:15px;top:76px;height:246px;display:flex;flex-direction:column;justify-content:space-between;text-align:right;width:30px;font-size:15px;color:var(--text-soft)}
+.x-labels{position:absolute;left:51px;right:15px;top:338px;display:flex;justify-content:space-between;font-size:15px;color:#a9b2c5}
+
+.player h2{gap:22px}
+.player h2 [data-icon]{width:32px;height:32px}
+#elapsed{position:absolute;right:22px;top:26px;font-size:17px;color:#a4aec2}
+.transport{display:flex;align-items:center;justify-content:center;gap:44px;margin-top:2px}
+.transport>[data-icon]{width:30px;height:30px}
+.transport #play{width:66px;height:66px;border:0;border-radius:50%;padding:18px;background:#272f3a;position:relative}
+.transport #play:hover{background:#344354}
+/* Draw the ring as one SVG stroke; mixed CSS border colors produce gaps in this renderer. */
+.transport #play:before{content:"";position:absolute;inset:0;border-radius:50%;background:url('../../assets/play-ring.svg') center/100% 100% no-repeat;pointer-events:none}

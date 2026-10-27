@@ -1,0 +1,61 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>audio-utility</title>
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="components/slider/slider.css">
+<link rel="stylesheet" href="components/toggle/toggle.css">
+<link rel="stylesheet" href="components/popover/popover.css">
+<link rel="stylesheet" href="components/modal/modal.css">
+<link rel="stylesheet" href="components/number-field/number-field.css">
+<link rel="stylesheet" href="features/dashboard/dashboard.css">
+<link rel="stylesheet" href="features/battery/battery.css">
+<link rel="stylesheet" href="features/wifi/wifi.css">
+<link rel="stylesheet" href="features/datetime/datetime.css">
+</head>
+<body><div class="statusbar"><span id="battery" title="Battery status unavailable"><svg viewBox="0 0 30 20"><rect x="1" y="3" width="24" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M27 7h2v6h-2z"/><rect id="battery-fill" x="3.5" y="5.5" width="0" height="9" rx=".6"/><path id="battery-bolt" d="M15 2l-5 9h4l-2 7 7-11h-5z" fill="#20252d" stroke="currentColor" stroke-width="1"/><path id="battery-unknown" d="M9 10h8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span><span id="wifi" data-icon="wifi"></span><span id="clock">261026&nbsp; 22:57</span></div>
+<header><div class="brandmark"><i></i><i></i><i></i><i></i><i></i></div><div><h1>audio-utility</h1><p>play · record · monitor · explore</p></div></header>
+<section class="card output"><h2><span data-icon="volume-up-fill"></span>Output</h2><div class="dropdown" id="output-device"><span class="selection">Internal Speakers</span><span data-icon="chevron-down"></span><div class="options"></div></div><div class="volume-row"><span id="mute" data-icon="volume-up-fill"></span><div id="volume" class="slider"><div class="rail"><div class="fill"></div><div class="thumb"></div></div></div><span id="volume-value">80</span></div></section>
+<section class="card input"><h2><span data-icon="mic-fill"></span>Input</h2><div class="dropdown" id="input-device"><span class="selection">Internal Microphone</span><span data-icon="chevron-down"></span><div class="options"></div></div><div id="meter"></div></section>
+<section class="card tools"><h2><span data-icon="wrench-heroicons"></span>Audio Tools</h2><div class="tool-row"><div class="tool" id="tone"><svg viewBox="0 0 40 40"><path d="M3 22C8 3 14 3 20 22S32 41 37 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><span>Tone</span></div><div class="tool" id="record"><span data-icon="record-circle"></span><span>Record</span></div><div class="tool" id="analyzer"><span data-icon="bar-chart-fill"></span><span>Analyzer</span></div></div></section>
+<section class="card spectrum"><h2><span data-icon="bar-chart-fill"></span>Spectrum</h2><span class="live">Live &nbsp; | &nbsp; 48 kHz</span><div class="y-labels"><span>-0</span><span>-12</span><span>-24</span><span>-36</span><span>-48</span><span>-60</span></div><div class="plot"><div id="bars"></div></div><div class="x-labels"><span>20</span><span>50</span><span>100</span><span>200</span><span>500</span><span>1k</span><span>2k</span><span>5k</span><span>10k</span><span>20k</span></div></section>
+<section class="card player"><h2><span data-icon="play-fill"></span>Now Playing</h2><span id="elapsed">00:00 / 00:00</span><div id="seek" class="slider"><div class="rail"><div class="fill"></div><div class="thumb"></div></div></div><div class="transport"><div id="previous" data-icon="skip-backward-fill"></div><div id="play" data-icon="play-fill"></div><div id="next" data-icon="skip-forward-fill"></div></div></section>
+<div id="calendar-popover" hidden>
+  <div id="calendar-month" class="popover-heading"></div>
+  <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+  <div id="calendar-days"></div>
+  <div class="popover-separator"></div>
+  <div id="adjust-datetime" class="popover-text-action">Adjust Date / Time</div>
+</div>
+<div id="date-editor" hidden>
+  <div class="date-section-title">Date</div><div id="date-fields" class="date-fields"></div>
+  <div class="date-section-title">Time <span class="popover-secondary">24-hour</span></div><div id="time-fields" class="date-fields"></div>
+  <div class="date-help">Changes are saved to this device’s clock and kept after restart.</div>
+  <div id="date-error" class="modal-error"></div><div id="date-save-status" class="popover-secondary"></div>
+</div>
+<div id="wifi-popover" hidden>
+  <div class="popover-heading"><span>Wi-Fi</span><div id="wifi-toggle" class="tray-toggle disabled"><div class="tray-toggle-knob"></div></div></div>
+  <div id="wifi-status" class="popover-secondary">Checking Wi-Fi…</div>
+  <div id="wifi-connection">
+    <div class="popover-separator"></div>
+    <div class="popover-section-label">Current Network</div>
+    <div class="wifi-network-row"><span class="wifi-network-icon" data-icon="wifi"></span><div><div id="wifi-network-name">Not connected</div><div id="wifi-network-detail" class="popover-secondary"></div></div><span id="wifi-check" data-icon="check"></span></div>
+  </div>
+  <div id="wifi-error" class="popover-error" hidden></div>
+</div>
+<div id="battery-popover" hidden>
+  <div class="popover-heading"><span>Battery</span><span id="battery-percent">—</span></div>
+  <div id="battery-description" class="popover-secondary">Battery status unavailable</div>
+  <div class="battery-gauge"><div id="battery-gauge-fill"></div></div>
+  <div class="popover-separator"></div>
+  <div class="popover-row"><span class="popover-secondary">Power source</span><span id="battery-source">Unknown</span></div>
+</div>
+<div id="status" hidden></div>
+<script src="assets/icons.js"></script>
+<script src="app.js"></script>
+<script src="components/popover/popover.js"></script>
+<script src="components/modal/modal.js"></script>
+<script src="features/dashboard/dashboard.js"></script>
+<script src="features/battery/battery.js"></script>
+<script src="features/wifi/wifi.js"></script>
+<script src="features/datetime/datetime.js"></script>
+</body></html>

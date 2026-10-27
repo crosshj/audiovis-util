@@ -1,0 +1,8 @@
+/media/audiovis-util/os-updates/filesystem.squashfs: OK
+/media/audiovis-util/os-backups/6af8bcb58ec0122620c0ccbe59c2e1acf9f07f519950931662642c9916e53b15/filesystem.squashfs.new: OK
+/media/audiovis-util/os-backups/6af8bcb58ec0122620c0ccbe59c2e1acf9f07f519950931662642c9916e53b15/filesystem.squashfs: OK
+/mnt/debian-update.KyW2FT/live/filesystem.squashfs.new: OK
+/mnt/debian-update.KyW2FT/live/filesystem.squashfs: OK
+Installed c26eb3afe6de2db98f786bfff782c34acf433116a2f0c97d81cc8aeaea4cde50
+Rollback image: /media/audiovis-util/os-backups/6af8bcb58ec0122620c0ccbe59c2e1acf9f07f519950931662642c9916e53b15/filesystem.squashfs
+Running RAM root is unchanged; reboot to use the new image.

@@ -1,0 +1,8 @@
+.statusbar #battery{display:block;width:30px;height:20px;color:var(--text-strong);position:relative}
+.statusbar #battery.low{color:var(--warn)}
+#battery-bolt{display:none}
+.statusbar #battery:before{content:"";position:absolute;left:-7px;right:-7px;top:-5px;bottom:-5px;border-radius:5px;pointer-events:none}
+.statusbar #battery.popover-active:before{background:#ffffff18}
+.battery-gauge{height:6px;margin-top:14px;border-radius:3px;background:#484f59;overflow:hidden}
+#battery-gauge-fill{height:100%;width:0;background:#d6dde6;border-radius:3px}
+#battery-gauge-fill.low{background:var(--warn)}
