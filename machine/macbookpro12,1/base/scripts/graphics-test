@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+
+if [ ! -x /usr/local/bin/sdl3-kmsdrm-smoke ]; then
+	echo 'SDL3 graphics test is unavailable. Check the startup log and audio-utility/base-packages.' >&2
+	exit 1
+fi
+
+export SDL_VIDEODRIVER=kmsdrm
+log=/tmp/audio-utility-graphics-test.log
+active_vt=$(cat /sys/class/tty/tty0/active)
+original_vt=${active_vt#tty}
+if openvt -s -w sh -c "exec /usr/local/bin/sdl3-kmsdrm-smoke >$log 2>&1"; then
+	status=0
+else
+	status=$?
+fi
+if [ -n "$original_vt" ]; then
+	chvt "$original_vt" || echo "Could not switch back to $active_vt." >&2
+fi
+cat "$log"
+exit "$status"

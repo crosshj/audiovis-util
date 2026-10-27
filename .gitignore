@@ -21,5 +21,8 @@
 go.work
 go.work.sum
 
-# env file
-.env
+# Machine-specific local secrets/configuration
+**/.env
+
+# Generated machine base payloads and other local build output
+/build/

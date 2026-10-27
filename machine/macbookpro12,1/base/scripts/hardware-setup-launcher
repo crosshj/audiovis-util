@@ -1,0 +1,25 @@
+#!/bin/sh
+# The overlay keeps this entry point. Copy the startup payload to RAM before
+# running it, so the boot volume can be released after initialization.
+ram=/run/hardware-setup
+mkdir -p "$ram" || exit 1
+for marker in /media/*/.alpine-release; do
+	[ -f "$marker" ] || continue
+	media=${marker%/.alpine-release}
+	[ -r "$media/hardware-setup.start" ] || exit 1
+	boot_device=$(awk -v path="$media" '$2 == path { print $1; exit }' /proc/mounts)
+	[ -n "$boot_device" ] || exit 1
+	printf '%s\n' "$boot_device" > "$ram/boot-device" || exit 1
+	for file in hardware-setup.start hardware-storage.sh hardware-test.sh graphics-test stage-graphics-runtime.sh; do
+		[ -r "$media/$file" ] || exit 1
+		cp "$media/$file" "$ram/$file" || exit 1
+	done
+	cp -R "$media/hardware-test" "$ram/" || exit 1
+	mkdir -p /usr/local/bin
+	cp "$ram/hardware-test.sh" /usr/local/bin/hardware-test || exit 1
+	chmod 755 /usr/local/bin/hardware-test
+	cp "$ram/graphics-test" /usr/local/bin/graphics-test || exit 1
+	chmod 755 /usr/local/bin/graphics-test
+	exec sh "$ram/hardware-setup.start" "$media" "$ram"
+done
+exit 0

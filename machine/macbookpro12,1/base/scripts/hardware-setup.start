@@ -1,0 +1,319 @@
+#!/bin/sh
+# Configure networking, SSH, and diagnostics on every diskless boot.
+set -u
+
+media=
+ram=/run/hardware-setup
+if [ "$#" -ge 1 ]; then
+	media=$1
+fi
+if [ "$#" -ge 2 ]; then
+	ram=$2
+fi
+if [ -z "$media" ]; then
+	for marker in /media/*/.alpine-release; do
+		if [ -f "$marker" ]; then
+			media=${marker%/.alpine-release}
+			break
+		fi
+	done
+fi
+[ -n "$media" ] || exit 0
+[ -f "$media/.alpine-release" ] || exit 0
+
+output_root=
+if [ -r "$ram/hardware-storage.sh" ]; then
+	. "$ram/hardware-storage.sh"
+	if find_audio_utility "$media"; then
+		output_root=$AUDIO_UTILITY
+	fi
+fi
+if [ -n "$output_root" ]; then
+	logdir=$output_root/hardware-reports
+fi
+
+stamp=$(date -u +%Y%m%dT%H%M%SZ)
+setup_log=/tmp/startup-setup-$stamp-$$.log
+exec 3>&1
+exec >> "$setup_log" 2>&1
+say() {
+	printf '%s\n' "$*" | tee -a "$setup_log" >&3
+}
+say "MacBook hardware startup at $stamp"
+say "Alpine boot media: $media"
+if [ -z "$output_root" ]; then
+	say "WARNING: audio-utility is unavailable or read-only; startup log is in $setup_log and reports may remain in RAM."
+else
+	say "Reports and startup log: $logdir"
+fi
+
+# Load SDL and Mesa into the RAM root from signed APKs on the writable data
+# volume. Restore /etc/apk/world so this runtime-only stack is not persisted as
+# a package selection that would require boot-volume writes.
+install_graphics_runtime() {
+	[ -n "$output_root" ] || {
+		say 'WARNING: audio-utility is unavailable; SDL3/OpenGL runtime is not loaded.'
+		return
+	}
+	graphics_packages=$output_root/base-packages/sdl3-kmsdrm
+	set -- "$graphics_packages"/*.apk
+	[ -f "$1" ] || {
+		say "WARNING: SDL3/Mesa package set is missing at $graphics_packages; run stage-graphics-runtime.sh."
+		return
+	}
+	world_backup=/tmp/apk-world-before-graphics-$$
+	if ! cp /etc/apk/world "$world_backup"; then
+		say 'WARNING: Could not protect Alpine package selections; graphics runtime was not installed.'
+		return
+	fi
+	if apk add --no-network --repositories-file /dev/null "$@"; then
+		if cp "$world_backup" /etc/apk/world; then
+			rm -f "$world_backup"
+		else
+			say 'ERROR: Could not restore Alpine package selections after graphics install.'
+		fi
+	if [ -x "$output_root/graphics-test/sdl3-kmsdrm-smoke" ]; then
+			install -m 755 "$output_root/graphics-test/sdl3-kmsdrm-smoke" /usr/local/bin/sdl3-kmsdrm-smoke
+			say 'SDL3/KMSDRM OpenGL test is available: graphics-test.'
+		else
+			say 'WARNING: SDL3 runtime loaded, but the persistent graphics-test binary is missing.'
+		fi
+	else
+		cp "$world_backup" /etc/apk/world || :
+		rm -f "$world_backup"
+		say 'WARNING: Could not load the SDL3/Mesa package set from audio-utility.'
+	fi
+}
+
+modprobe applesmc 2>/dev/null || :
+led=/sys/class/leds/smc::kbd_backlight
+if [ -r "$led/max_brightness" ] && [ -w "$led/brightness" ]; then
+	max=$(cat "$led/max_brightness")
+	echo none > "$led/trigger" 2>/dev/null || :
+	echo $((max / 2)) > "$led/brightness" 2>/dev/null || :
+	say "Keyboard backlight: enabled at half brightness."
+else
+	say 'Keyboard backlight: applesmc did not expose a controllable LED.'
+fi
+
+setup_ok=1
+persist_needed=0
+if [ ! -e /etc/.wifi-setup-saved ] && [ ! -e "$media/.wifi-setup-saved" ] && [ ! -e "$media/.wifi-configured" ]; then
+	persist_needed=1
+	say 'First-time Wi-Fi package and configuration setup.'
+	if command -v setup-apkcache >/dev/null 2>&1; then
+		if ! setup-apkcache "$media/cache"; then
+			say 'WARNING: Could not configure the optional APK cache; continuing with offline package installation.'
+		fi
+	fi
+	if [ "$setup_ok" -eq 1 ] && ! apk add --no-network --repositories-file /dev/null \
+		--repository "$media/apks" \
+	iw wpa_supplicant wpa_supplicant-openrc ifupdown-ng ifupdown-ng-wifi dhcpcd; then
+		say 'ERROR: Could not install Wi-Fi packages from the SD-card repository.'
+		setup_ok=0
+	fi
+	if [ "$setup_ok" -eq 1 ]; then
+		mkdir -p /etc/network /etc/conf.d /etc/apk
+		printf '%s\n' "$media/apks" > /etc/apk/repositories
+		printf 'wpa_supplicant_if="wlan0"\nwpa_supplicant_args=""\n' > /etc/conf.d/wpa_supplicant
+		setup_ok=1
+	fi
+fi
+
+# Network settings are rendered from the machine-specific .env by build-base.sh and
+# persisted in the Alpine overlay. Refuse to silently replace them with values
+# tied to one LAN.
+if [ ! -s /etc/network/interfaces ] || [ ! -s /etc/wpa_supplicant/wpa_supplicant.conf ]; then
+	say 'ERROR: Generated network configuration is missing from the Alpine base.'
+	setup_ok=0
+fi
+
+# Install the SSH server from the card's offline repository on each diskless
+# boot. The public key is staged on ALPINE; no receiver or extra service is used.
+if apk add --no-network --repositories-file /dev/null --repository "$media/apks" \
+	openssh-server openssh-server-common-openrc; then
+	mkdir -p /etc/ssh/authorized_keys
+	chmod 700 /etc/ssh/authorized_keys
+	if [ -r "$media/ssh-authorized-key" ]; then
+		install -m 600 "$media/ssh-authorized-key" /etc/ssh/authorized_keys/root
+	else
+		say 'ERROR: SSH public key is missing from the ALPINE volume.'
+		setup_ok=0
+	fi
+	cat > /etc/ssh/sshd_config <<'EOF'
+Port 22
+AddressFamily inet
+ListenAddress 0.0.0.0
+HostKey /etc/ssh/ssh_host_ed25519_key
+PubkeyAuthentication yes
+AuthenticationMethods publickey
+AuthorizedKeysFile /etc/ssh/authorized_keys/%u
+PermitRootLogin prohibit-password
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitEmptyPasswords no
+AllowUsers root
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+PermitTunnel no
+PermitTTY yes
+UseDNS no
+EOF
+	if [ ! -s /etc/ssh/ssh_host_ed25519_key ]; then
+		ssh-keygen -q -t ed25519 -N '' -f /etc/ssh/ssh_host_ed25519_key || setup_ok=0
+		persist_needed=1
+	fi
+	chmod 600 /etc/ssh/ssh_host_ed25519_key
+	chmod 644 /etc/ssh/ssh_host_ed25519_key.pub
+	if ! rc-update add sshd default; then
+		say 'ERROR: Could not enable the SSH server.'
+		setup_ok=0
+	fi
+else
+	say 'ERROR: Could not install the SSH server from the SD-card repository.'
+	setup_ok=0
+fi
+install_graphics_runtime
+
+# OpenRC normally discards local.d output. Make this service verbose so its
+# concise progress and final report are visible during boot.
+mkdir -p /etc/conf.d
+printf 'rc_verbose=yes\n' > /etc/conf.d/local
+if ! rc-update add wpa_supplicant boot; then
+	say 'ERROR: Could not enable the wpa_supplicant OpenRC service.'
+	setup_ok=0
+fi
+if ! rc-update add networking boot; then
+	say 'ERROR: Could not enable the networking OpenRC service.'
+	setup_ok=0
+fi
+
+say 'Bringing wlan0 up and starting Wi-Fi authentication.'
+ip link set wlan0 up || say 'ERROR: Could not bring wlan0 up.'
+if ! rc-service wpa_supplicant restart; then
+	rc-service wpa_supplicant start || say 'ERROR: wpa_supplicant service failed to start.'
+fi
+
+attempt=0
+while [ "$attempt" -lt 30 ]; do
+	if iw dev wlan0 link 2>/dev/null | grep -q 'Connected to'; then
+		break
+	fi
+	sleep 1
+	attempt=$((attempt + 1))
+done
+say 'Wi-Fi association status:'
+iw dev wlan0 link 2>&1 | tee -a "$setup_log" >&3 || :
+
+say 'Applying the configured Wi-Fi address and gateway.'
+if ! rc-service networking restart; then
+	rc-service networking start || say 'ERROR: networking service failed to start.'
+fi
+if ! ip -4 address show dev wlan0 2>/dev/null | grep -q 'inet '; then
+	ifup wlan0 || say 'ERROR: ifup wlan0 failed.'
+fi
+network_address=$(ip -4 -o address show dev wlan0 2>/dev/null | awk 'NR == 1 { sub(/\/.*/, "", $4); print $4; exit }')
+network_address=${network_address:-unavailable}
+if [ -s /etc/ssh/ssh_host_ed25519_key ] && sshd -t; then
+	if rc-service sshd restart || rc-service sshd start; then
+		say "SSH ready at root@$network_address (Ed25519 key required)."
+	else
+		say 'ERROR: Could not start the SSH server.'
+	fi
+else
+	say 'ERROR: SSH configuration or host key is invalid.'
+fi
+
+run_report() {
+	if [ -f "$ram/hardware-test.sh" ]; then
+		say 'Running the automatic hardware and connectivity report.'
+		sh "$ram/hardware-test.sh" "$media" "$ram" 2>&1 | tee -a "$setup_log" >&3
+	else
+		say 'ERROR: hardware-test.sh is missing from the ALPINE volume.'
+	fi
+}
+run_report
+
+latest_report=
+if [ -n "$logdir" ]; then
+	if [ -r "$logdir/latest-report" ]; then
+		latest_report=$(cat "$logdir/latest-report")
+	fi
+	if [ -z "$latest_report" ] || [ ! -f "$latest_report" ]; then
+		latest_report=$(ls -1t "$logdir"/hardware-report-*.txt 2>/dev/null | head -n 1)
+	fi
+fi
+mkdir -p /etc/lbu
+if ! grep -q '^LBU_BACKUPDIR=' /etc/lbu/lbu.conf 2>/dev/null; then
+	printf 'LBU_BACKUPDIR="%s"\n' "$media" >> /etc/lbu/lbu.conf
+fi
+{
+	cat <<'EOF'
+MacBookPro12,1 — Alpine hardware test
+
+Wi-Fi setup and the hardware report run automatically at startup.
+Latest network results:
+EOF
+	echo "Remote shell: ssh root@$network_address from the configured development Mac."
+	if [ -n "$latest_report" ] && [ -f "$latest_report" ]; then
+		sed -n '/^Wi-Fi association:/,$p' "$latest_report"
+		echo "Full report: $latest_report"
+	else
+		echo "No saved hardware report. See startup log: $setup_log"
+	fi
+	if [ -n "$output_root" ]; then
+		echo "Startup log: $output_root/hardware-reports/$(basename "$setup_log")"
+	else
+		echo "Startup log (RAM only): $setup_log"
+	fi
+	echo 'To rerun the report: hardware-test'
+	echo 'To shut down safely: poweroff, then wait for the MacBook to halt.'
+} > /etc/motd
+
+if [ "$setup_ok" -eq 1 ]; then
+	: > /etc/.wifi-setup-saved
+fi
+if ! lbu include /etc/autologin-root /etc/inittab /etc/local.d/hardware-setup.start \
+	/etc/wpa_supplicant/wpa_supplicant.conf /etc/network/interfaces \
+	/etc/conf.d/local /etc/ssh/sshd_config /etc/ssh/authorized_keys/root \
+	/etc/ssh/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key.pub; then
+	say 'ERROR: Could not add the custom login and network files to the Alpine backup list.'
+	setup_ok=0
+fi
+if [ -e /etc/.wifi-setup-saved ] && ! lbu include /etc/.wifi-setup-saved; then
+	say 'ERROR: Could not add the Wi-Fi setup marker to the Alpine backup list.'
+	setup_ok=0
+fi
+if [ "$persist_needed" -eq 1 ]; then
+	if mount -o remount,rw "$media" && LBU_BACKUPDIR="$media" lbu commit; then
+		say 'Saved first-time configuration to the Alpine overlay.'
+	else
+		say 'ERROR: lbu commit failed; first-time settings will not survive reboot.'
+	fi
+else
+	say 'No first-time configuration changes; skipping lbu commit to avoid boot-volume writes.'
+fi
+sync
+say "Startup checks finished. MOTD and full report are ready; log: $setup_log"
+
+# Keep the base partition available for inspection and report reruns, but
+# protect it from routine writes after the overlay has been committed.
+if mount -o remount,ro "$media"; then
+	say 'ALPINE remains mounted read-only; the root filesystem is in RAM.'
+else
+	say 'WARNING: Could not remount ALPINE read-only; it remains mounted.'
+fi
+
+if [ -n "$output_root" ]; then
+	mkdir -p "$output_root/hardware-reports"
+	say 'Saving the startup log to audio-utility; leaving that volume mounted read-write.'
+	sync
+	if ! cp "$setup_log" "$output_root/hardware-reports/"; then
+		say 'WARNING: Could not save the startup log; it remains in RAM.'
+	fi
+	sync
+else
+	say 'WARNING: audio-utility is unavailable; its reports and logs remain in RAM.'
+fi
+sync
