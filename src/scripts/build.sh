@@ -14,7 +14,19 @@ printf '%s  %s\n' "$sha" "$archive" | shasum -a 256 -c -
 # The legacy release API publishes no checksum. This pins the first retrieved
 # official archive; a changed archive must be reviewed before changing this pin.
 mkdir -p "$cache/sdk"
-tar -xf "$archive" -C "$cache/sdk"
+if command -v 7zz >/dev/null 2>&1; then
+	7zz x -y "-o$cache/sdk" "$archive" >/dev/null
+elif command -v 7z >/dev/null 2>&1; then
+	7z x -y "-o$cache/sdk" "$archive" >/dev/null
+elif command -v 7za >/dev/null 2>&1; then
+	7za x -y "-o$cache/sdk" "$archive" >/dev/null
+else
+	# BSD tar on macOS can read 7z; GNU tar on Ubuntu cannot.
+	if ! tar -xf "$archive" -C "$cache/sdk"; then
+		echo 'Could not extract the Ultralight .7z SDK. Install 7-Zip (7zz/7z) and retry.' >&2
+		exit 1
+	fi
+fi
 "$here/build-gpu.sh"
 cd "$repo/src"
 GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -trimpath -ldflags='-s -w -buildid=' -o "$out/audio-utility" ./app

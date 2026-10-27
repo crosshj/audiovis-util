@@ -18,7 +18,8 @@ machine/macbookpro12,1-debian/app/deploy-test.sh
 
 The build produces `build/macbookpro12,1-debian/audio-utility-debian-amd64.tar.gz`,
 including the Go binary, bundled UI/fonts/icons, Ultralight runtime, GPU bridge,
-and shaders. Run the target smoke test with:
+and shaders. Building requires Go, Zig 0.15.2, Python 3, and a 7-Zip-capable
+archive extractor for the SDK. Run the target smoke test with:
 
 ```sh
 machine/macbookpro12,1-debian/base/macbook-ssh.sh \

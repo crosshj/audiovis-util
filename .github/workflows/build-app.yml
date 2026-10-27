@@ -35,6 +35,10 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: '1.26.x'
+      - name: Install 7-Zip for the Ultralight SDK archive
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y 7zip
       - uses: mlugg/setup-zig@v2
         with:
           version: 0.15.2
