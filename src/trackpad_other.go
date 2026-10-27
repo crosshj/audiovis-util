@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/crosshj/audio-utility/src/input"
+	"github.com/crosshj/audiovis-util/src/input"
 )
 
 func startTrackpadPointer() (<-chan input.Event, error) {

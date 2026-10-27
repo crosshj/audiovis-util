@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/Zyko0/go-sdl3/sdl"
-	"github.com/crosshj/audio-utility/src/input"
+	"github.com/crosshj/audiovis-util/src/input"
 	"golang.org/x/image/font"
 	"golang.org/x/image/font/opentype"
 	"golang.org/x/image/math/fixed"

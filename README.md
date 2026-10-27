@@ -1,9 +1,9 @@
-# Audio Utility
+# audiovis-util
 
-This repository will contain the software for a local-network audio utility
-workstation. The workstation app is its own full-screen environment: it owns the
-display, pointer, and user interaction. It does not run inside a conventional
-desktop or window manager.
+This repository contains software for a local-network workstation, starting
+with an audio utility app. The app is its own full-screen environment: it owns
+the display, pointer, and user interaction. It does not run inside a
+conventional desktop or window manager.
 
 The app runs on a prepared machine base that provides Linux, hardware support,
 Wi-Fi, and remote development access. Machine-specific setup is kept separate

@@ -1,4 +1,4 @@
-module github.com/crosshj/audio-utility/src
+module github.com/crosshj/audiovis-util/src
 
 go 1.26.0
 
