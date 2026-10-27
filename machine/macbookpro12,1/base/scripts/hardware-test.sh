@@ -111,12 +111,40 @@ check_cmd() {
     run df -h
 
     section 'Install signed offline diagnostic tools into RAM'
-    # These packages are signed and locally staged. The force option tells apk
-    # that this disposable RAM-only install is intentional.
-    if apk --no-network --force-non-repository --repositories-file /dev/null add "$ram"/hardware-test/apks/*.apk; then
-        echo 'Offline diagnostic tools installed.'
+    # Include the SDL/Mesa packages in the same transaction so APK does not
+    # prune the runtime-only packages loaded earlier during startup.
+    graphics_packages=
+    if [ -r "$ram/hardware-storage.sh" ]; then
+        . "$ram/hardware-storage.sh"
+        if find_audio_utility "$media"; then
+            graphics_packages=$AUDIO_UTILITY/base-packages/sdl3-kmsdrm
+        fi
+    fi
+    if [ -n "$graphics_packages" ]; then
+        set -- "$graphics_packages"/*.apk
+        if [ -f "$1" ]; then
+            set -- "$ram"/hardware-test/apks/*.apk "$graphics_packages"/*.apk
+        else
+            set -- "$ram"/hardware-test/apks/*.apk
+        fi
     else
-        echo 'Offline package install failed; the tools remain on the ALPINE volume.'
+        set -- "$ram"/hardware-test/apks/*.apk
+    fi
+
+    world_backup=/tmp/apk-world-before-hardware-test-$$
+    if cp /etc/apk/world "$world_backup"; then
+        if apk --no-network --force-non-repository --repositories-file /dev/null add "$@"; then
+            echo 'Offline diagnostic tools installed.'
+        else
+            echo 'Offline package install failed; the tools remain on the ALPINE volume.'
+        fi
+        if cp "$world_backup" /etc/apk/world; then
+            rm -f "$world_backup"
+        else
+            echo 'WARNING: Could not restore /etc/apk/world after diagnostic package install.'
+        fi
+    else
+        echo 'Could not protect Alpine package selections; diagnostic packages were not installed.'
     fi
 
     section 'Audio device enumeration after installing ALSA tools'

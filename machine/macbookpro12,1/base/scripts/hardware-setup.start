@@ -235,6 +235,15 @@ run_report() {
 }
 run_report
 
+# The report's diagnostic APK transaction includes SDL/Mesa so it cannot prune
+# the runtime-only packages loaded earlier during startup. Verify the app's
+# shared library is still available before SSH users rely on the app.
+if [ -r /usr/lib/libSDL3.so.0 ]; then
+	say 'Verified SDL3 shared library is present in the RAM root.'
+else
+	say 'ERROR: SDL3 shared library is missing from the RAM root after package setup.'
+fi
+
 latest_report=
 if [ -n "$logdir" ]; then
 	if [ -r "$logdir/latest-report" ]; then
