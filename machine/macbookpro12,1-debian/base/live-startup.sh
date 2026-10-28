@@ -156,6 +156,8 @@ Wi-Fi interface: ${wifi_interface:-unavailable}
 Wi-Fi: $([ -n "$wifi_interface" ] && iw dev "$wifi_interface" link 2>/dev/null | sed -n 's/^[[:space:]]*SSID: /connected to /p' | head -n 1)
 SSH service ready: $ssh_ready; address root@${ADDRESS%%/*} (configured key required)
 Reports: /media/audiovis-util/hardware-reports (when the data volume is mounted)
+Launch the fullscreen UI from this root console with: audio-utility
+Press Escape to close the UI and return to the console.
 Root changes are temporary and will be lost at reboot.
 EOF
 say 'Debian headless startup setup complete.'
